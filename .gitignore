@@ -1,9 +1,6 @@
-**/.env
-.streamlit/secrets.toml
-secrets.toml
+.env
 .vscode/launch.json
 **.py[cod]
 __pycache__/
-__pycache__/database.cpython-311.pyc
 .idea
 .DS_Store

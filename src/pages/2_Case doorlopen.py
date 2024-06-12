@@ -75,8 +75,26 @@ class Case:
         with open('./data/bedrijfsoverzicht.json', 'w') as json_file:
            json.dump(bedrijfsoverzicht_json_response, json_file, indent=4)
         print("Succesfully generated and saved bedrijfsoverzicht")
+        print("Generating onderzoeksmodules")
+        self.generate_onderzoeksmodules(bedrijfsoverzicht_json_response)
+        print("Succesfully generated onderzoeksmodules")
 
         return bedrijfsoverzicht_json_response
+
+    def generate_onderzoeksmodules(self, bedrijfsoverzicht):
+        onderzoeksmodules = bedrijfsoverzicht.get("onderzoeksmodules")
+        for onderzoeksmodule in onderzoeksmodules:
+            self.generate_onderzoeksmodule(onderzoeksmodule)
+    
+    def generate_onderzoeksmodule(self, onderzoeksmodule):
+        type = onderzoeksmodule.get("type")
+        print(f"Generating data for {type}")
+        system_message = self.read_prompt(f'generate_{type}')
+        user_message = json.dumps(onderzoeksmodule)
+        generated_data = self.openai_call(system_message, user_message, True)
+        generated_data_path = f'./data/onderzoeksmodules/{type}.json'
+        with open(generated_data_path, 'w') as json_file:
+            json.dump(generated_data, json_file, indent=4)
 
     def openai_call(self, system_message, user_message, json_response=False):
         messages = [
@@ -168,7 +186,7 @@ class Case:
         else:
             st.write("Onbekend module type.")
             st.write(module_type)
-    
+        
     def show_generate_cx_prestatiemeting_module(self, module):
         st.header("cx prestatiemodule")
         st.subheader("🔢data hier🔢")
@@ -189,7 +207,7 @@ class Case:
         vraag = module.get("vraag")
         st.subheader(f"vraag: {vraag}")
         st.text_area(label="antwoord:")
-
+    
 if __name__ == "__main__":
     case = Case()
     case.main()

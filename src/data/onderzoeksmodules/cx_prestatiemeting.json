@@ -2,11 +2,11 @@
     "type": "cx_prestatiemeting",
     "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
     "mogelijke_conclusies": [
-        "Lage NPS en klanttevredenheidsscores wijzen op een behoefte aan verbeteringen in de klantbeleving.",
-        "Een hoge churn rate kan aangeven dat klanten ontevreden zijn met de huidige service en retourbeleid.",
-        "Analyse van klantretentiepercentages kan helpen bij het identificeren van patronen en oorzaken van klantverlies."
+        "Lage NPS scores wijzen op een algemene ontevredenheid onder klanten, wat aangeeft dat er verbeteringen nodig zijn in de klantbeleving.",
+        "Variabele klanttevredenheidsscores tussen verschillende teams wijzen op inconsistenties in de manier waarop klantproblemen worden opgelost.",
+        "Een lage klantretentiepercentage kan wijzen op een gebrek aan klantloyaliteit, mogelijk veroorzaakt door een inconsistente klantbeleving."
     ],
-    "vraag": "Wat kan een hoge churn rate aangeven?",
-    "antwoord": "Een hoge churn rate kan aangeven dat klanten ontevreden zijn met de huidige service en retourbeleid.",
-    "data": "NPS: 45, klanttevredenheidsscore: 78%, klantretentiepercentage: 85%, churn rate: 15%"
+    "vraag": "Wat kan een lage NPS score aangeven?",
+    "antwoord": "Een lage NPS score kan wijzen op een algemene ontevredenheid onder klanten, wat aangeeft dat er verbeteringen nodig zijn in de klantbeleving.",
+    "data": "NPS: 45, Klanttevredenheidsscore: 78%, Klantretentiepercentage: 65%"
 }

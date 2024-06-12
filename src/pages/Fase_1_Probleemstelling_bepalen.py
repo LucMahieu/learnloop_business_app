@@ -1,7 +1,6 @@
 import streamlit as st
 from utils.openai_client import connect_to_openai
-
-st.set_page_config(page_title="Beeckestijn", page_icon="🔵", layout='centered', initial_sidebar_state='auto')
+from utils.utils import render_next_page_button
 
 class Probleemstelling:
     def __init__(self):
@@ -40,7 +39,7 @@ class Probleemstelling:
         """
         st.session_state.messages.append({"role": "user", "content": user_input})
 
-    def generate_assistant_response(self, user_input):
+    def generate_assistant_response(self):
         """
         Generate a response from the assistant.
         """
@@ -66,14 +65,13 @@ class Probleemstelling:
                 st.markdown(f"{user_input}")
 
             with st.chat_message("assistant", avatar='🔵'):
-                response = st.write_stream(self.generate_assistant_response(user_input))
+                response = st.write_stream(self.generate_assistant_response())
                 self.add_to_assistant_responses(response)
-            
-            if response == "Top! Laten we doorgaan naar de volgende fase.":
-                with st.chat_message("assistant", avatar='🔵'):
-                    st.button("Volgende")
+                if response == "Top! Laten we doorgaan naar de volgende fase.":
+                    render_next_page_button("Fase_2_Case_doorlopen")
+                    
 
-    def main(self):
+    def run(self):
         self.initialize_session_state()
 
         st.title("Probleemstelling bepalen")
@@ -85,7 +83,6 @@ class Probleemstelling:
         self.display_chat_messages()
         self.handle_user_input()
 
-
 if __name__ == "__main__":
     probleemstelling = Probleemstelling()
-    probleemstelling.main()
+    probleemstelling.run()

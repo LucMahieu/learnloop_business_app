@@ -19,6 +19,7 @@ class Probleemstelling:
         if "messages" not in st.session_state:
             st.session_state.messages = []
 
+
     def display_chat_messages(self):
         """
         Display chat messages in the Streamlit app.
@@ -65,10 +66,17 @@ class Probleemstelling:
                 st.markdown(f"{user_input}")
 
             with st.chat_message("assistant", avatar='🔵'):
+
                 response = st.write_stream(self.generate_assistant_response())
                 self.add_to_assistant_responses(response)
-                if response == "Top! Laten we doorgaan naar de volgende fase.":
+
+                if response == "Top! Laten we doorgaan naar de volgende fase." \
+                    or st.session_state.messages[-1]['content'] == "Top! Laten we doorgaan naar de volgende fase.":
                     render_next_page_button("Fase_2_Case_doorlopen")
+
+                    # Save the problem statement in the session state
+                    # st.session_state.problemstatement = st.session_state.messages[-3]['content'] # TODO: Really bad practice. Need to change it to JSON and make it adaptive instead of hardcoded
+                    # st.write(f"Probleemstelling: {st.session_state.problemstatement}")
                     
 
     def run(self):

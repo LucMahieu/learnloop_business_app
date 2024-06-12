@@ -150,7 +150,7 @@ class Case:
         if current_index == len(modules)-1:
             with col2:
                 if st.button("Naar eindscherm"):
-                    st.session_state.page = "Eindscherm"
+                    st.session_state.page = "eindscherm"
                     st.rerun()
 
     
@@ -168,7 +168,7 @@ class Case:
         else:
             st.write("Onbekend module type.")
             st.write(module_type)
-
+    
     def show_generate_cx_prestatiemeting_module(self, module):
         st.header("cx prestatiemodule")
         st.subheader("🔢data hier🔢")

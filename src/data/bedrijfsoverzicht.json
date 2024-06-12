@@ -1,0 +1,55 @@
+{
+    "bedrijfsinfo": {
+        "naam": "LearnLoop",
+        "sector": "E-learning",
+        "aantal_werknemers": 150,
+        "bedrijfsomschrijving": "LearnLoop is een toonaangevend e-learning platform dat een breed scala aan online cursussen en trainingen aanbiedt. Het bedrijf richt zich op zowel individuele studenten als bedrijven die hun werknemers willen bijscholen. LearnLoop staat bekend om zijn gebruiksvriendelijke interface, interactieve leermiddelen en hoogwaardige content."
+    },
+    "probleemstelling": "Bij LearnLoop leidt het gebrek aan duidelijke doelstellingen en KPIs voor klanttevredenheid ertoe dat alle teams ad hoc beslissingen nemen bij het oplossen van klantproblemen, zoals retouren en restituties, wat resulteert in inconsistente klantbeleving en verwarring bij klanten over het retourbeleid.",
+    "mogelijke_oplossingen": [
+        "Het opstellen van duidelijke en meetbare KPIs voor klanttevredenheid en het communiceren hiervan naar alle teams.",
+        "Het implementeren van een gestandaardiseerd retour- en restitutiebeleid dat consistent wordt toegepast door alle teams.",
+        "Het trainen van medewerkers in klantgericht denken en het belang van een consistente klantbeleving.",
+        "Het gebruik van klantfeedback om continue verbeteringen door te voeren in het retour- en restitutieproces."
+    ],
+    "stakeholder": {
+        "naam": "Emma Johnson",
+        "functie": "Chief Customer Officer (CCO)",
+        "relevantie": "Emma Johnson is verantwoordelijk voor de algehele klanttevredenheid en het waarborgen van een consistente klantbeleving bij LearnLoop.",
+        "perspectief": "Emma ziet het probleem als een grote bedreiging voor de klanttevredenheid en merkwaarde van LearnLoop. Haar prioriteit is om een uniforme aanpak te ontwikkelen die de klanttevredenheid verhoogt en de verwarring over het retourbeleid vermindert.",
+        "belangen_en_doelen": "Emma's belangrijkste doel is om de klanttevredenheid te verhogen door duidelijke doelstellingen en KPIs te implementeren. Ze wil ervoor zorgen dat alle teams dezelfde standaarden volgen bij het oplossen van klantproblemen, wat zal leiden tot een consistente en positieve klantbeleving."
+    },
+    "controversiele_punten": [
+        "De tijd en middelen die nodig zijn om nieuwe KPIs en een gestandaardiseerd beleid te ontwikkelen en te implementeren.",
+        "De mogelijke weerstand van teams die gewend zijn aan hun eigen manier van werken en niet willen veranderen."
+    ],
+    "onderzoeksmodules": [
+        {
+            "type": "klantbehoefte_en_gedrag",
+            "omschrijving": "Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.",
+            "mogelijke_conclusies": [
+                "Klanten geven aan dat ze meer duidelijkheid willen over het retourbeleid, wat wijst op een behoefte aan betere communicatie en transparantie.",
+                "Feedback van klanten toont aan dat inconsistenties in de afhandeling van retouren en restituties leiden tot frustratie en een negatieve klantbeleving.",
+                "Er is een segment van klanten dat vaker gebruik maakt van het retourbeleid, wat aangeeft dat er mogelijk problemen zijn met de productkwaliteit of verwachtingen."
+            ]
+        },
+        {
+            "type": "cx_prestatiemeting",
+            "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
+            "mogelijke_conclusies": [
+                "Lage NPS en klanttevredenheidsscores wijzen op een algemene ontevredenheid onder klanten, wat kan worden toegeschreven aan de inconsistente klantbeleving.",
+                "Een lage klantretentiepercentage kan erop wijzen dat klanten na een negatieve ervaring met het retourbeleid niet terugkeren.",
+                "Verbeteringen in NPS en klanttevredenheidsscores na implementatie van gestandaardiseerde processen kunnen aantonen dat de nieuwe aanpak effectief is."
+            ]
+        },
+        {
+            "type": "organisatiecultuur_analyse",
+            "omschrijving": "Een overzicht van de huidige organisatiecultuur, inclusief waarden, gedragingen, en interne feedback van medewerkers.",
+            "mogelijke_conclusies": [
+                "Er is een gebrek aan een klantgerichte cultuur binnen het bedrijf, wat bijdraagt aan de inconsistente klantbeleving.",
+                "Medewerkers voelen zich niet voldoende ondersteund of getraind om klantproblemen op een consistente manier op te lossen.",
+                "Er is weerstand tegen verandering binnen bepaalde teams, wat de implementatie van nieuwe processen bemoeilijkt."
+            ]
+        }
+    ]
+}

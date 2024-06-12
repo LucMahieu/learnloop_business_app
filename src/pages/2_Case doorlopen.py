@@ -17,6 +17,12 @@ class Case:
 
         if "overview" not in st.session_state:
             st.session_state.overview = None
+        
+        if "current_module_index" not in st.session_state:
+            st.session_state.current_module_index = 0
+        
+        if "modules" not in st.session_state:
+            st.session_state.modules = self.load_modules()
 
     def main(self):
         if st.session_state.page == "home":
@@ -25,7 +31,19 @@ class Case:
             self.overview_screen()
         elif st.session_state.page == "onderzoeksmodules":
             self.onderzoeksmodules()
-        
+        elif st.session_state.page == "eindscherm":
+            self.eindscherm()
+    
+    def load_modules(self):
+        modules_dir = './data/onderzoeksmodules/'
+        modules = []
+        for filename in os.listdir(modules_dir):
+            if filename.endswith('.json'):
+                with open(os.path.join(modules_dir, filename), 'r') as file:
+                    module = json.load(file)
+                    modules.append(module)
+        return modules
+    
     def home_screen(self):
         st.title("Welkom bij het doorlopen van de case")
         st.write("Dit is het beginscherm. Klik op de knop hieronder om verder te gaan.")
@@ -41,8 +59,8 @@ class Case:
     
     def load_overview(self):
         # Lees de JSON-gegevens uit het bestand
-        if os.path.exists('./data/generated_data/bedrijfsoverzicht.json'):
-            with open('./data/generated_data/bedrijfsoverzicht.json', 'r') as json_file:
+        if os.path.exists('./data/bedrijfsoverzicht.json'):
+            with open('./data/bedrijfsoverzicht.json', 'r') as json_file:
                 overview_json = json.load(json_file)
                 return overview_json
         else:
@@ -52,7 +70,12 @@ class Case:
     def generate_overview(self):
         system_message = self.read_prompt('generate_bedrijfsomschrijving')
         user_message = st.session_state.probleemstelling
+        print("Generating bedrijfsoverzicht")
         bedrijfsoverzicht_json_response = self.openai_call(system_message, user_message, True)
+        with open('./data/bedrijfsoverzicht.json', 'w') as json_file:
+           json.dump(bedrijfsoverzicht_json_response, json_file, indent=4)
+        print("Succesfully generated and saved bedrijfsoverzicht")
+
         return bedrijfsoverzicht_json_response
 
     def openai_call(self, system_message, user_message, json_response=False):
@@ -60,7 +83,7 @@ class Case:
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_message}
         ]
-        print(f"Started generation with prompt: {system_message}")
+        print(f"Started generation with prompt: {system_message[:30]}")
         response = self.client.chat.completions.create(
             model="gpt-4o",
             temperature=0.2,
@@ -79,7 +102,7 @@ class Case:
     #TODO: Als er al een bedrijfsoverzicht gemaakt is, dan zal deze eerst verwijderd moeten worden.
     def overview_screen(self):
         st.title("Overzicht")
-        if not os.path.exists('./data/generated_data/bedrijfsoverzicht.json'):
+        if not os.path.exists('./data/bedrijfsoverzicht.json'):
             st.write("Een moment geduld, het overzicht wordt gegenereerd...")
             overview = self.generate_overview()
             if overview:
@@ -100,6 +123,72 @@ class Case:
             if st.button("Ga naar onderzoeksmodules"):
                 st.session_state.page = "onderzoeksmodules"
                 st.rerun()
+    def onderzoeksmodules(self):
+        st.title("Onderzoeksmodules")
+        modules = st.session_state.modules
+        current_index = st.session_state.current_module_index
+
+        if current_index < len(modules):
+            module = modules[current_index]
+            self.show_module(module)
+        else:
+            st.write("Alle modules voltooid!")
+        
+        col1, col2 = st.columns([1,1])
+        if current_index != 0:
+            with col1:
+                if st.button("Vorige module") and current_index > 0:
+                    st.session_state.current_module_index -= 1
+                    st.rerun()
+
+        if current_index != len(modules)-1:
+            with col2:
+                if st.button("Volgende module") and current_index < len(modules) - 1:
+                    st.session_state.current_module_index += 1
+                    st.rerun()
+
+        if current_index == len(modules)-1:
+            with col2:
+                if st.button("Naar eindscherm"):
+                    st.session_state.page = "Eindscherm"
+                    st.rerun()
+
+    
+    def eindscherm(self):
+        st.subheader("Dit is het eindscherm")
+
+    def show_module(self, module):
+        module_type = module.get("type")
+        if module_type == "cx_prestatiemeting":
+            self.show_generate_cx_prestatiemeting_module(module)
+        elif module_type == "klantbehoefte_en_gedrag":
+            self.show_klantbehoefte_en_gedrag_module(module)
+        elif module_type == "organisatiecultuur_analyse":
+            self.show_organisatiecultuur_analyse_module(module)
+        else:
+            st.write("Onbekend module type.")
+            st.write(module_type)
+
+    def show_generate_cx_prestatiemeting_module(self, module):
+        st.header("cx prestatiemodule")
+        st.subheader("🔢data hier🔢")
+        vraag = module.get("vraag")
+        st.subheader(f"vraag: {vraag}")
+        st.text_area(label="antwoord")
+    
+    def show_organisatiecultuur_analyse_module(self, module):
+        st.header("organisatiecultuur analyse module")
+        st.subheader("🔢data hier🔢")
+        vraag = module.get("vraag")
+        st.subheader(f"vraag: {vraag}")
+        st.text_area(label="antwoord")
+
+    def show_klantbehoefte_en_gedrag_module(self, module):
+        st.header("klantbehoefte en gedrag module")
+        st.subheader("🔢data hier🔢")
+        vraag = module.get("vraag")
+        st.subheader(f"vraag: {vraag}")
+        st.text_area(label="antwoord:")
 
 if __name__ == "__main__":
     case = Case()

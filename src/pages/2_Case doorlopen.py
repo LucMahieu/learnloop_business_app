@@ -85,7 +85,8 @@ class Case:
         onderzoeksmodules = bedrijfsoverzicht.get("onderzoeksmodules")
         for onderzoeksmodule in onderzoeksmodules:
             self.generate_onderzoeksmodule(onderzoeksmodule)
-    
+        st.session_state.modules = self.load_modules()
+
     def generate_onderzoeksmodule(self, onderzoeksmodule):
         type = onderzoeksmodule.get("type")
         print(f"Generating data for {type}")
@@ -200,6 +201,7 @@ class Case:
         vraag = module.get("vraag")
         st.subheader(f"vraag: {vraag}")
         st.text_area(label="antwoord")
+        
 
     def show_klantbehoefte_en_gedrag_module(self, module):
         st.header("klantbehoefte en gedrag module")

@@ -2,11 +2,11 @@
     "type": "klantbehoefte_en_gedrag",
     "omschrijving": "Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.",
     "mogelijke_conclusies": [
-        "Klanten geven aan dat ze meer duidelijkheid willen over het retour- en restitutiebeleid, wat wijst op een behoefte aan betere communicatie.",
-        "Feedback van klanten toont aan dat er inconsistenties zijn in de manier waarop retouren en restituties worden afgehandeld, wat leidt tot verwarring en ontevredenheid.",
-        "Klanten met een hoger aantal retouren geven aan dat ze vaker problemen hebben met de kwaliteit van de cursussen, wat wijst op een mogelijke kwaliteitskwestie."
+        "Klanten geven aan dat het huidige retourbeleid te ingewikkeld en tijdrovend is, wat wijst op een behoefte aan een eenvoudiger proces.",
+        "Feedback van klanten toont aan dat er onduidelijkheid is over de retourvoorwaarden, wat leidt tot frustratie.",
+        "Klanten zoals Jan Jansen en Lisa de Jong waarderen de producten, maar zijn ontevreden over de retourprocedure, wat aangeeft dat het probleem specifiek bij het retourbeleid ligt."
     ],
-    "vraag": "Wat is een veelvoorkomende klacht van klanten met betrekking tot het retour- en restitutiebeleid?",
-    "antwoord": "Klanten geven aan dat ze meer duidelijkheid willen over het retour- en restitutiebeleid, wat wijst op een behoefte aan betere communicatie.",
-    "data": "Klantprofielen, aankoopgeschiedenis, en feedback van klanten."
+    "vraag": "Wat is een veelvoorkomend probleem dat klanten ervaren met het huidige retourbeleid?",
+    "antwoord": "Klanten geven aan dat het huidige retourbeleid te ingewikkeld en tijdrovend is.",
+    "data": "Klanten zoals Jan Jansen en Lisa de Jong waarderen de producten, maar zijn ontevreden over de retourprocedure. Feedback van klanten toont aan dat er onduidelijkheid is over de retourvoorwaarden, wat leidt tot frustratie."
 }

@@ -1,0 +1,14 @@
+Je krijgt zometeen een JSON. Het is jouw taak om de volgende JSON terug te geven.
+
+- Vraag een vraag die gebaseerd is op de mogelijke mogelijke
+- Antwoord op deze vraag
+- Daadwerkelijke data gegenereerd horend bij 
+Geef je antwoord terug in de volgende vorm:
+{
+    "type": "...",
+    "omschrijving": "",
+    "mogelijke_conclusies": ["...","..."],
+    "vraag": "...?",
+    "antwoord": "...",
+    "data": "..."
+}

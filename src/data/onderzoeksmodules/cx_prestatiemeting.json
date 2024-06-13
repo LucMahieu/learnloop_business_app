@@ -2,11 +2,15 @@
     "type": "cx_prestatiemeting",
     "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
     "mogelijke_conclusies": [
-        "Lage NPS scores wijzen op een algemene ontevredenheid onder klanten, wat aangeeft dat er verbeteringen nodig zijn in de klantbeleving.",
-        "Variabele klanttevredenheidsscores tussen verschillende teams wijzen op inconsistenties in de manier waarop klantproblemen worden opgelost.",
-        "Een lage klantretentiepercentage kan wijzen op een gebrek aan klantloyaliteit, mogelijk veroorzaakt door een inconsistente klantbeleving."
+        "De NPS en klanttevredenheidsscores zijn gedaald sinds de invoering van het huidige retourbeleid, wat aangeeft dat het beleid een negatieve impact heeft op de klantbeleving.",
+        "Een lage klantretentie wijst erop dat ontevreden klanten minder geneigd zijn om terug te keren voor herhaalaankopen."
     ],
-    "vraag": "Wat kan een lage NPS score aangeven?",
-    "antwoord": "Een lage NPS score kan wijzen op een algemene ontevredenheid onder klanten, wat aangeeft dat er verbeteringen nodig zijn in de klantbeleving.",
-    "data": "NPS: 45, Klanttevredenheidsscore: 78%, Klantretentiepercentage: 65%"
+    "vraag": "Wat is de huidige NPS en hoe verhoudt deze zich tot de periode voor de invoering van het nieuwe retourbeleid?",
+    "antwoord": "De huidige NPS is 45, wat een daling van 10 punten betekent ten opzichte van de periode voor de invoering van het nieuwe retourbeleid, toen de NPS 55 was.",
+    "data": {
+        "huidige_NPS": 45,
+        "NPS_voor_invoering_retourbeleid": 55,
+        "klanttevredenheidsscore": 78,
+        "klantretentiepercentage": 65
+    }
 }

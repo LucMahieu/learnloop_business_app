@@ -13,7 +13,8 @@ class Case:
             st.session_state.page = "home"
         
         if "probleemstelling" not in st.session_state:
-            st.session_state.probleemstelling = 'Bij LearnLoop leidt het gebrek aan duidelijke doelstellingen en KPIs voor klanttevredenheid ertoe dat alle teams ad hoc beslissingen nemen bij het oplossen van klantproblemen, zoals retouren en restituties, wat resulteert in inconsistente klantbeleving en verwarring bij klanten over het retourbeleid.'
+            # st.session_state.probleemstelling = 'Bij LearnLoop leidt het gebrek aan duidelijke doelstellingen en KPIs voor klanttevredenheid ertoe dat alle teams ad hoc beslissingen nemen bij het oplossen van klantproblemen, zoals retouren en restituties, wat resulteert in inconsistente klantbeleving en verwarring bij klanten over het retourbeleid.'
+            st.session_state.probleemstelling = 'Klanten van LearnLoop zijn ontevreden over het retourbeleid'
 
         if "overview" not in st.session_state:
             st.session_state.overview = None
@@ -197,7 +198,7 @@ class Case:
     
     def show_organisatiecultuur_analyse_module(self, module):
         st.header("organisatiecultuur analyse module")
-        st.subheader("🔢data hier🔢")
+        st.write(module.get("data"))
         vraag = module.get("vraag")
         st.subheader(f"vraag: {vraag}")
         st.text_area(label="antwoord")

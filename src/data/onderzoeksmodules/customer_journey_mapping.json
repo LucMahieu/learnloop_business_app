@@ -1,0 +1,11 @@
+{
+    "type": "customer_journey_mapping",
+    "omschrijving": "Data-analyse van de klantreis, van bewustwording tot aankoop en loyaliteit.",
+    "mogelijke_conclusies": [
+        "Er zijn belangrijke touchpoints in de klantreis waar klanten afhaken vanwege het retourbeleid, wat aangeeft dat deze stappen verbeterd moeten worden.",
+        "Feedback van klanten toont aan dat er onduidelijkheid is over bepaalde fases in de retourprocedure, wat leidt tot frustratie en lagere conversie."
+    ],
+    "vraag": "Wat zijn de belangrijkste redenen waarom klanten afhaken tijdens de klantreis?",
+    "antwoord": "De belangrijkste redenen waarom klanten afhaken tijdens de klantreis zijn onduidelijkheden en frustraties met betrekking tot het retourbeleid en de retourprocedure.",
+    "data": "Analyse van klantfeedback en conversiegegevens toont aan dat klanten vaak afhaken bij touchpoints gerelateerd aan het retourbeleid. Specifieke feedback wijst op onduidelijkheden in de retourprocedure die leiden tot frustratie en lagere conversie."
+}

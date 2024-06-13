@@ -13,7 +13,7 @@ class Case:
             st.session_state.page = "home"
         
         if "probleemstelling" not in st.session_state:
-            # st.session_state.probleemstelling = 'Bij LearnLoop leidt het gebrek aan duidelijke doelstellingen en KPIs voor klanttevredenheid ertoe dat alle teams ad hoc beslissingen nemen bij het oplossen van klantproblemen, zoals retouren en restituties, wat resulteert in inconsistente klantbeleving en verwarring bij klanten over het retourbeleid.'
+            # st.session_state.probleemstelling = 'Bij LearnLoop leidt het gebrek aan duidelijke doelstellingen en KPIs voor klanttevreden""eid ertoe dat alle teams ad hoc beslissingen nemen bij het oplossen van klantproblemen, zoals retouren en restituties, wat resulteert in inconsistente klantbeleving en verwarring bij klanten over het retourbeleid.'
             # st.session_state.probleemstelling = 'Klanten van LearnLoop zijn ontevreden over het retourbeleid'
             # st.session_state.probleemstelling = 'Klanten van LearnLoop vinden de site niet duidelijk'
             st.session_state.probleemstelling = 'LearnLoop heeft lage NPS scores'
@@ -205,8 +205,21 @@ class Case:
         st.write(module.get("data"))
         vraag = module.get("vraag")
         st.subheader(f"vraag: {vraag}")
-        st.text_area(label="antwoord")
-        
+        student_answer = st.text_area("Jouw antwoord:")
+
+        # Button to check the answer
+        if st.button("Controleer Antwoord"):
+            feedback = self.check_answer(module["vraag"], student_answer, module["antwoord"])
+            st.write(f"{feedback}.")
+
+    def check_answer(self, question, student_answer, model_answer):
+        prompt = self.read_prompt('feedback_op_vraag')
+        user_message = f"""Input:\n
+        Vraag: {question}\n
+        Antwoord student: {student_answer}\n
+        Voorbeeld antwoord: {model_answer}\n""" 
+        feedback = self.openai_call(prompt, user_message, False)
+        return feedback
 
     def show_klantbehoefte_en_gedrag_module(self, module):
         st.header("klantbehoefte en gedrag module")

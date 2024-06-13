@@ -23,6 +23,7 @@ Voorbeeld output:
                     "Conversiepercentage": 30,
                     "Gemiddelde Tijd op Pagina (min)": 5,
                     "Bouncepercentage": 40,
+                    "Klanttevredenheidsscore": 22,
                     "Klantfeedback": "De site is informatief, maar soms traag."
                 },
                 {
@@ -31,6 +32,7 @@ Voorbeeld output:
                     "Conversiepercentage": 40,
                     "Gemiddelde Tijd op Pagina (min)": 4,
                     "Bouncepercentage": 35,
+                    "Klanttevredenheidsscore": 33,
                     "Klantfeedback": "Goede beschrijvingen, maar soms verwarrend."
                 },
                 {
@@ -38,6 +40,8 @@ Voorbeeld output:
                     "Aantal Klanten": 4200,
                     "Conversiepercentage": 50,
                     "Gemiddelde Tijd op Pagina (min)": 3,
+                    "Bouncepercentage": 45,
+                    "Klanttevredenheidsscore": 44,
                     "Verlaten Winkelwagens (%)": 20,
                     "Klantfeedback": "Het toevoegen van producten is eenvoudig, maar coupons zijn lastig."
                 },
@@ -46,6 +50,8 @@ Voorbeeld output:
                     "Aantal Klanten": 2100,
                     "Conversiepercentage": 70,
                     "Gemiddelde Tijd op Pagina (min)": 6,
+                    "Bouncepercentage": 31,
+                    "Klanttevredenheidsscore": 65,
                     "Verlaten Afrekenprocessen (%)": 10,
                     "Klantfeedback": "Betaalmogelijkheden zijn uitgebreid, maar de verzending is duur."
                 },
@@ -54,13 +60,16 @@ Voorbeeld output:
                     "Aantal Klanten": 1470,
                     "Conversiepercentage": 80,
                     "Gemiddelde Tijd op Pagina (min)": 2,
+                    "Bouncepercentage": 66,
+                    "Klanttevredenheidsscore": 79,
                     "Klantfeedback": "Producten komen snel aan, maar retourbeleid is ingewikkeld."
                 },
                 {
                     "Touchpoint": "Klantenservice",
                     "Aantal Klanten": 1176,
                     "Conversiepercentage": 60,
-                    "Gemiddelde Reactietijd (min)": 15,
+                    "Gemiddelde Tijd op Pagina (min)": 15,
+                    "Bouncepercentage": 49,
                     "Klanttevredenheidsscore": 70,
                     "Klantfeedback": "Vriendelijk, maar vaak lange wachttijden."
                 },
@@ -68,7 +77,8 @@ Voorbeeld output:
                     "Touchpoint": "Retourproces",
                     "Aantal Klanten": 706,
                     "Conversiepercentage": 30,
-                    "Gemiddelde Verwerkingstijd (dagen)": 10,
+                    ""Gemiddelde Tijd op Pagina (min)": 10,
+                    "Bouncepercentage": 99,
                     "Klanttevredenheidsscore": 50,
                     "Klantfeedback": "Retourvoorwaarden zijn onduidelijk en tijdrovend."
                 }

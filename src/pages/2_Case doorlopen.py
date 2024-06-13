@@ -186,9 +186,9 @@ class Case:
         st.subheader("Dit is het eindscherm")
 
     def show_table(self, title, table):
-        st.header(title)
+        st.header(title.replace("_", " ").capitalize())
         df = pd.DataFrame(table)
-        df.set_index(df.columns[0], inplace=True) # To set the first column as the index, for example month
+        # df.set_index(df.columns[0], inplace=True) # To set the first column as the index, for example month
         st.table(df)
 
     def show_module_tables(self, module):

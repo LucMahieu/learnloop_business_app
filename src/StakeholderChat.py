@@ -45,7 +45,7 @@ class StakeholderChat:
         """
         Generate a response from the assistant.
         """
-        role_prompt = open("./assets/prompts/chat_met_stakeholder.txt").read().append()
+        role_prompt = open("./assets/prompts/chat_met_stakeholder.txt").read()
         stream = self.client.chat.completions.create(
             model=st.session_state.openai_model,
             messages=[

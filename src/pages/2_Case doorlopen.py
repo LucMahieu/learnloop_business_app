@@ -3,6 +3,7 @@ import json
 import os
 from utils.openai_client import connect_to_openai
 import pandas as pd
+from StakeholderChat import StakeholderChat
 
 
 class Case:
@@ -27,6 +28,9 @@ class Case:
 
         if "modules" not in st.session_state:
             st.session_state.modules = self.load_modules()
+        
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
 
     def main(self):
         if st.session_state.page == "home":
@@ -138,7 +142,7 @@ class Case:
             st.write("Dit is het gegenereerde overzicht:")
             bedrijfsoverzicht = self.load_overview()
             st.write(bedrijfsoverzicht)
-            if os.listdir('./data/onderzoeksmodules/') == 0:
+            if len(os.listdir('./data/onderzoeksmodules/')) == 0:
                 print("Generating onderzoeksmodules")
                 self.generate_onderzoeksmodules(bedrijfsoverzicht)
                 print("Succesfully generated onderzoeksmodules")
@@ -226,45 +230,13 @@ class Case:
 
     def show_module(self, module):
         module_type = module.get("type")
-        # module_title = module.get("title")
 
-        if module_type == "chat_stakeholders":
-            return
-        
-        self.show_module_tables(module)
-        
-        # if module_type == "financiele_data":
-        #     
+        if module_type == "stakeholder_chat":
+            stakeholderChat = StakeholderChat(module.get("naam"), st.session_state.probleemstelling, module)
+            stakeholderChat.main()
+        else:
+            self.show_module_tables(module)
 
-        # if module_type == "cx_prestatiemeting":
-        #     self.show_generate_cx_prestatiemeting_module(module)
-        # elif module_type == "klantbehoefte_en_gedrag":
-        #     self.show_klantbehoefte_en_gedrag_module(module)
-        # elif module_type == "organisatiecultuur_analyse":
-        #     self.show_organisatiecultuur_analyse_module(module)
-        # else:
-        #     st.write("Onbekend module type.")
-        #     st.write(module_type)
-
-    def show_generate_cx_prestatiemeting_module(self, module):
-        st.header("cx prestatiemodule")
-        st.subheader("🔢data hier🔢")
-        vraag = module.get("vraag")
-        st.subheader(f"vraag: {vraag}")
-        st.text_area(label="antwoord")
-
-    def show_organisatiecultuur_analyse_module(self, module):
-        st.header("organisatiecultuur analyse module")
-        st.write(module.get("data"))
-        vraag = module.get("vraag")
-        st.subheader(f"vraag: {vraag}")
-        student_answer = st.text_area("Jouw antwoord:")
-
-        # Button to check the answer
-        if st.button("Controleer Antwoord"):
-            feedback = self.check_answer(
-                module["vraag"], student_answer, module["antwoord"])
-            st.write(f"{feedback}.")
 
     def check_answer(self, question, student_answer, model_answer):
         prompt = self.read_prompt('feedback_op_vraag')
@@ -274,13 +246,6 @@ class Case:
         Voorbeeld antwoord: {model_answer}\n"""
         feedback = self.openai_call(prompt, user_message, False)
         return feedback
-
-    def show_klantbehoefte_en_gedrag_module(self, module):
-        st.header("klantbehoefte en gedrag module")
-        st.subheader("🔢data hier🔢")
-        vraag = module.get("vraag")
-        st.subheader(f"vraag: {vraag}")
-        st.text_area(label="antwoord:")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1 @@
+Gegeven is een bericht waarin een probleemstelling gegeven wordt. Jouw doel is om alleen die probleemstelling te extraheren uit het bericht en die terug te geven. Als er geen probleemstelling is, moet je reageren met "Geen probleemstelling geformuleerd".

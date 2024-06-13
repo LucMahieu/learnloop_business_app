@@ -55,6 +55,29 @@ class Probleemstelling:
         )
         
         return stream
+    
+    # def extract_problem_statement(self, response):
+    #     """
+    #     Extract the problem statement from the response.
+    #     """
+    #     problem_statement = response.split("\n\n")[1]
+    #     return problem_statement
+    
+
+    def extract_problem_statement(self, response):
+        """
+        Generate a response from the assistant.
+        """
+        role_prompt = open("./assets/prompts/extract_problem_statement.txt").read()
+        response = self.client.chat.completions.create(
+            model=st.session_state.openai_model,
+            messages=[
+                {"role": "system", "content": role_prompt},
+                {"role": "assistant", "content": response} # Take the third last message from the chat
+            ]
+        )
+        return response.choices[0].message.content
+
 
     def handle_user_input(self):
         """
@@ -70,12 +93,11 @@ class Probleemstelling:
                 response = st.write_stream(self.generate_assistant_response())
                 self.add_to_assistant_responses(response)
 
-                if response == "Top! Laten we doorgaan naar de volgende fase." \
-                    or st.session_state.messages[-1]['content'] == "Top! Laten we doorgaan naar de volgende fase.":
-                    render_next_page_button("Fase_2_Case_doorlopen")
+                if st.session_state.messages[-1]['content'] == "Top! Laten we doorgaan naar de volgende fase.":
+                #     render_next_page_button("Fase_2_Case_doorlopen")
 
                     # Save the problem statement in the session state
-                    # st.session_state.problemstatement = st.session_state.messages[-3]['content'] # TODO: Really bad practice. Need to change it to JSON and make it adaptive instead of hardcoded
+                    st.session_state.problemstatement = self.extract_problem_statement(st.session_state.messages[-3]['content']) # TODO: Bad practice. Need to change it to JSON and make it adaptive instead of hardcoded
                     # st.write(f"Probleemstelling: {st.session_state.problemstatement}")
                     
 

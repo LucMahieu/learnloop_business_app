@@ -12,7 +12,7 @@ class FeedbackOpSlides:
             uploaded_file_bytes = uploaded_file.getvalue()
             uploaded_powerpoint = PowerPoint(uploaded_file_bytes)
             temp_dir_name = uploaded_powerpoint.save_uploaded_file()
-            image_base64_list = uploaded_powerpoint.pptx_image_base64_list(os.path.join(temp_dir_name,'temp.pptx'),os.path.join(temp_dir_name,'temp.pdf'))
+            image_base64_list = uploaded_powerpoint.pptx_image_base64_list(os.path.join(temp_dir_name,'temp.pptx'), os.path.join(temp_dir_name,'temp.pdf'))
             feedback_list = uploaded_powerpoint.response_image_base64_list_openai("pptx_feedback", image_base64_list)
             score_list = uploaded_powerpoint.response_image_base64_list_openai("pptx_scores", image_base64_list)
             score_list = [ json_to_df(x, ["Rubric", "Score"]) for x in score_list ]

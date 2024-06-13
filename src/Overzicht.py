@@ -28,5 +28,4 @@ class Overzicht:
 if __name__ == "__main__":
     overzicht = Overzicht()
     overzicht.write_something()
-    overzicht.render_next_page_button("Fase_1_Probleemstelling_bepalen")
         

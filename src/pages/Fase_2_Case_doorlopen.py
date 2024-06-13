@@ -6,8 +6,7 @@ class CaseDoorlopen:
         pass
 
     def run(self):
-        st.title("Case doorlopen")   
-        render_next_page_button("Fase_3_Feedback_op_slides")
+        st.title("Case doorlopen")
 
 if __name__ == "__main__":
     case_doorlopen = CaseDoorlopen()

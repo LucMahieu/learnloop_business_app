@@ -61,7 +61,7 @@ class PowerPoint:
         self.uploaded_file = uploaded_file
     
     def save_uploaded_file(self):
-        temp_dir = tempfile.TemporaryDirectory(delete = False)
+        temp_dir = tempfile.TemporaryDirectory(delete=False)
         uploaded_file_path = os.path.join(temp_dir.name,'temp.pptx')
         with open(uploaded_file_path, 'wb') as f:
             f.write(self.uploaded_file)
@@ -69,6 +69,11 @@ class PowerPoint:
         return temp_dir.name
 
     def pptx_image_base64_list(self, input_file_path, output_file_path):
+        print(f"""
+              \n\n
+              INPUT FILE PATH: {input_file_path}
+            \n\n
+        """)
         pptx_to_pdf(input_file_path, output_file_path)
         image_base64_list = pdf_to_base64_images(output_file_path)
         return image_base64_list

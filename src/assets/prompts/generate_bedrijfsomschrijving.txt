@@ -12,13 +12,14 @@ De bedrijfsomschrijving moet bevatten:
 - Gevolgen: De impact van het probleem op verschillende aspecten van het bedrijf, zoals klanttevredenheid, omzet, en merkwaarde.
 3. Mogelijke oplossingen voor het probleem
 4. Controversiële punten
-5. Onderzoeksmodules
-- Genereer alle onderzoeksmodules
+5. Onderzoeksmodules:
+- Kies uit de volgende onderzoeksmodules de twee meest relevante met betrekking tot het probleem
 	- onderzoeksmodule: klantbehoefte_en_gedrag, omschrijving: Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.
 	- onderzoeksmodule: customer_journey_mapping, omschrijving: Data-analyse van de klantreis, van bewustwording tot aankoop en loyaliteit
 	- onderzoeksmodule: cx_prestatiemeting, omschrijving:  Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.
 	- onderzoeksmodule: organisatiecultuur_analyse, omschrijving: Een overzicht van de huidige organisatiecultuur, inclusief waarden, gedragingen, en interne feedback van medewerkers.
 	- onderzoeksmodule: financiele_data, omschrijving: Data tabel met daarin informatie over Customer Lifetime Value (CLV), Customer Acquisition Cost (CAC), customer retention rate, gross margin, average revenue per user, churn rate.
+- Laat de stakeholder_chat altijd terugkomen in de output
 	- onderzoeksmodule: stakeholder_chat, omschrijving: Profielschets van stakeholder met naam, functie, perspectief: Inzicht in hoe de stakeholder het probleem ziet en wat zijn / haar prioriteiten en zorgen zijn en belangen en doelen: De specifieke belangen en doelen van de stakeholder met betrekking tot het probleem en de mogelijke oplossingen.
 - mogelijke_conclusies: Als op basis van deze onderzoeksmodule daadwerkelijk concrete data wordt gegenereerd. Wat zijn conclusies die een consultant hieruit dan kan trekken? Zorg dat deze mogelijke conclusies aansluiten op het probleem van het bedrijf en de eerder gegeven mogelijke oplossingen.
 

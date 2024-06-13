@@ -19,8 +19,7 @@ De bedrijfsomschrijving moet bevatten:
 - Belangen en Doelen: De specifieke belangen en doelen van de stakeholder met betrekking tot het probleem en de mogelijke oplossingen.
 5. Controversiële punten
 6. Onderzoeksmodules
-- Kies uit de volgende onderzoeksmodules de 3 die het meest relevant zijn voor een onderzoek van een consultant naar het probleem:
-Kies hierbij uit de volgende opties:
+- Genereer alle onderzoeksmodules
 	- onderzoeksmodule: klantbehoefte_en_gedrag, omschrijving: Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.
 	- onderzoeksmodule: customer_journey_mapping, omschrijving: Data-analyse van de klantreis, van bewustwording tot aankoop en loyaliteit
 	- onderzoeksmodule: cx_prestatiemeting, omschrijving:  Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.

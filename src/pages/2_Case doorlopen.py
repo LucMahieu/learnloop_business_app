@@ -14,8 +14,9 @@ class Case:
         
         if "probleemstelling" not in st.session_state:
             # st.session_state.probleemstelling = 'Bij LearnLoop leidt het gebrek aan duidelijke doelstellingen en KPIs voor klanttevredenheid ertoe dat alle teams ad hoc beslissingen nemen bij het oplossen van klantproblemen, zoals retouren en restituties, wat resulteert in inconsistente klantbeleving en verwarring bij klanten over het retourbeleid.'
-            st.session_state.probleemstelling = 'Klanten van LearnLoop zijn ontevreden over het retourbeleid'
-
+            # st.session_state.probleemstelling = 'Klanten van LearnLoop zijn ontevreden over het retourbeleid'
+            # st.session_state.probleemstelling = 'Klanten van LearnLoop vinden de site niet duidelijk'
+            st.session_state.probleemstelling = 'LearnLoop heeft lage NPS scores'
         if "overview" not in st.session_state:
             st.session_state.overview = None
         
@@ -76,10 +77,6 @@ class Case:
         with open('./data/bedrijfsoverzicht.json', 'w') as json_file:
            json.dump(bedrijfsoverzicht_json_response, json_file, indent=4)
         print("Succesfully generated and saved bedrijfsoverzicht")
-        print("Generating onderzoeksmodules")
-        self.generate_onderzoeksmodules(bedrijfsoverzicht_json_response)
-        print("Succesfully generated onderzoeksmodules")
-
         return bedrijfsoverzicht_json_response
 
     def generate_onderzoeksmodules(self, bedrijfsoverzicht):
@@ -124,16 +121,22 @@ class Case:
         st.title("Overzicht")
         if not os.path.exists('./data/bedrijfsoverzicht.json'):
             st.write("Een moment geduld, het overzicht wordt gegenereerd...")
-            overview = self.generate_overview()
-            if overview:
+            bedrijfsoverzicht = self.generate_overview()
+            print("Generating onderzoeksmodules")
+            self.generate_onderzoeksmodules(bedrijfsoverzicht)
+            print("Succesfully generated onderzoeksmodules")
+            if bedrijfsoverzicht:
                 st.rerun()
             else:
                 st.write("Er is een fout opgetreden bij het genereren van het overzicht.")
         else:
             st.write("Dit is het gegenereerde overzicht:")
-            overview = self.load_overview()
-            st.write(overview)
-        
+            bedrijfsoverzicht = self.load_overview()
+            st.write(bedrijfsoverzicht)
+            if os.listdir('./data/onderzoeksmodules/') == 0:
+                print("Generating onderzoeksmodules")
+                self.generate_onderzoeksmodules(bedrijfsoverzicht)
+                print("Succesfully generated onderzoeksmodules")
         col1, col2 = st.columns([1,1])
         with col1:
             if st.button("Ga terug"):
@@ -143,6 +146,7 @@ class Case:
             if st.button("Ga naar onderzoeksmodules"):
                 st.session_state.page = "onderzoeksmodules"
                 st.rerun()
+
     def onderzoeksmodules(self):
         st.title("Onderzoeksmodules")
         modules = st.session_state.modules

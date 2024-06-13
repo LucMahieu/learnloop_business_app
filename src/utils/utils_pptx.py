@@ -30,10 +30,12 @@ def pptx_to_pdf(input_file_path, output_file_path):
     input_file_path = os.path.abspath(input_file_path)
     output_file_path = os.path.abspath(output_file_path)
     powerpoint = comtypes.client.CreateObject("Powerpoint.Application")
-    powerpoint.Visible = 1
+    powerpoint.Visible = 2
     slides = powerpoint.Presentations.Open(input_file_path)
     slides.SaveAs(output_file_path, 32)
     slides.Close()
+    powerpoint.Quit()
+    pythoncom.CoUninitialize()
 
 def pdf_to_base64_images(pdf_path):
     images = convert_from_path(pdf_path)
@@ -81,9 +83,14 @@ class PowerPoint:
             user_content =  [{
                 "type": "image_url",
                 "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}}]
+            if template == "pptx_scores":
+                response_format = { "type": "json_object" }
+            else:
+                response_format = { "type": "text"}
             response = client.chat.completions.create(
                 model="gpt-4o",
                 messages=[ {   "role": "system", "content":  system_content },
-                          {   "role": "user", "content": user_content}])
+                          {   "role": "user", "content": user_content}],
+                response_format=response_format)
             response_list.append(  response.choices[0].message.content )
         return response_list

@@ -1,4 +1,4 @@
-Je bent een Professor in Management aan de Harvard School of Business. Je krijgt zometeen een probleemstelling. Jouw taak is om een bedrijf te genereren op basis van de probleemstelling. Geef dit bedrijf in JSON format. Bij dit bedrijf horen onderzoeksmodules. Deze onderzoeksmodules zullen als basis dienen voor het onderzoek wat de student moet doen. Op basis van de informatie in de onderzoeksmodules moet data gegenereerd kunnen worden waaruit conclusies kunnen worden getrokken.
+Je bent een professor business op een universiteit. Je krijgt zometeen een JSON met daarin een onderzoeksmodule. Je moet data voor de onderzoeksmodule genereren, waarin een student wordt getoetst of hij de data snapt. Geef een JSON terug die het volgende bevat:
 
 Benader deze taak stap voor stap, neem je tijd en sla geen stappen over.
 1. type: deze krijg je uit de input
@@ -12,61 +12,66 @@ Benader deze taak stap voor stap, neem je tijd en sla geen stappen over.
 
 Voorbeeld output:
 {
-    "touchpoints": [
+    "type": "klantbehoefte_en_gedrag",
+    "omschrijving": "Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.",
+    "data":
         {
-            "Touchpoint": "Website Bezoek",
-            "Aantal Klanten": 10000,
-            "Conversiepercentage": 30,
-            "Gemiddelde Tijd op Pagina (min)": 5,
-            "Bouncepercentage": 40,
-            "Klantfeedback": "De site is informatief, maar soms traag."
-        },
-        {
-            "Touchpoint": "Productpagina",
-            "Aantal Klanten": 7000,
-            "Conversiepercentage": 40,
-            "Gemiddelde Tijd op Pagina (min)": 4,
-            "Bouncepercentage": 35,
-            "Klantfeedback": "Goede beschrijvingen, maar soms verwarrend."
-        },
-        {
-            "Touchpoint": "Winkelwagen",
-            "Aantal Klanten": 4200,
-            "Conversiepercentage": 50,
-            "Gemiddelde Tijd op Pagina (min)": 3,
-            "Verlaten Winkelwagens (%)": 20,
-            "Klantfeedback": "Het toevoegen van producten is eenvoudig, maar coupons zijn lastig."
-        },
-        {
-            "Touchpoint": "Afrekenproces",
-            "Aantal Klanten": 2100,
-            "Conversiepercentage": 70,
-            "Gemiddelde Tijd op Pagina (min)": 6,
-            "Verlaten Afrekenprocessen (%)": 10,
-            "Klantfeedback": "Betaalmogelijkheden zijn uitgebreid, maar de verzending is duur."
-        },
-        {
-            "Touchpoint": "Post-aankoop",
-            "Aantal Klanten": 1470,
-            "Conversiepercentage": 80,
-            "Gemiddelde Tijd op Pagina (min)": 2,
-            "Klantfeedback": "Producten komen snel aan, maar retourbeleid is ingewikkeld."
-        },
-        {
-            "Touchpoint": "Klantenservice",
-            "Aantal Klanten": 1176,
-            "Conversiepercentage": 60,
-            "Gemiddelde Reactietijd (min)": 15,
-            "Klanttevredenheidsscore": 70,
-            "Klantfeedback": "Vriendelijk, maar vaak lange wachttijden."
-        },
-        {
-            "Touchpoint": "Retourproces",
-            "Aantal Klanten": 706,
-            "Conversiepercentage": 30,
-            "Gemiddelde Verwerkingstijd (dagen)": 10,
-            "Klanttevredenheidsscore": 50,
-            "Klantfeedback": "Retourvoorwaarden zijn onduidelijk en tijdrovend."
-        }
-    ]
+            "touchpoints": [
+                {
+                    "Touchpoint": "Website Bezoek",
+                    "Aantal Klanten": 10000,
+                    "Conversiepercentage": 30,
+                    "Gemiddelde Tijd op Pagina (min)": 5,
+                    "Bouncepercentage": 40,
+                    "Klantfeedback": "De site is informatief, maar soms traag."
+                },
+                {
+                    "Touchpoint": "Productpagina",
+                    "Aantal Klanten": 7000,
+                    "Conversiepercentage": 40,
+                    "Gemiddelde Tijd op Pagina (min)": 4,
+                    "Bouncepercentage": 35,
+                    "Klantfeedback": "Goede beschrijvingen, maar soms verwarrend."
+                },
+                {
+                    "Touchpoint": "Winkelwagen",
+                    "Aantal Klanten": 4200,
+                    "Conversiepercentage": 50,
+                    "Gemiddelde Tijd op Pagina (min)": 3,
+                    "Verlaten Winkelwagens (%)": 20,
+                    "Klantfeedback": "Het toevoegen van producten is eenvoudig, maar coupons zijn lastig."
+                },
+                {
+                    "Touchpoint": "Afrekenproces",
+                    "Aantal Klanten": 2100,
+                    "Conversiepercentage": 70,
+                    "Gemiddelde Tijd op Pagina (min)": 6,
+                    "Verlaten Afrekenprocessen (%)": 10,
+                    "Klantfeedback": "Betaalmogelijkheden zijn uitgebreid, maar de verzending is duur."
+                },
+                {
+                    "Touchpoint": "Post-aankoop",
+                    "Aantal Klanten": 1470,
+                    "Conversiepercentage": 80,
+                    "Gemiddelde Tijd op Pagina (min)": 2,
+                    "Klantfeedback": "Producten komen snel aan, maar retourbeleid is ingewikkeld."
+                },
+                {
+                    "Touchpoint": "Klantenservice",
+                    "Aantal Klanten": 1176,
+                    "Conversiepercentage": 60,
+                    "Gemiddelde Reactietijd (min)": 15,
+                    "Klanttevredenheidsscore": 70,
+                    "Klantfeedback": "Vriendelijk, maar vaak lange wachttijden."
+                },
+                {
+                    "Touchpoint": "Retourproces",
+                    "Aantal Klanten": 706,
+                    "Conversiepercentage": 30,
+                    "Gemiddelde Verwerkingstijd (dagen)": 10,
+                    "Klanttevredenheidsscore": 50,
+                    "Klantfeedback": "Retourvoorwaarden zijn onduidelijk en tijdrovend."
+                }
+        ]
+    }
 }

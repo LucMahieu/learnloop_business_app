@@ -11,20 +11,15 @@ De bedrijfsomschrijving moet bevatten:
 - Probleemstelling
 - Gevolgen: De impact van het probleem op verschillende aspecten van het bedrijf, zoals klanttevredenheid, omzet, en merkwaarde.
 3. Mogelijke oplossingen voor het probleem
-4. Een profiel van de belangrijkste stakeholder in deze situatie:
-- Naam
-- Functie
-- Waarom is deze stakeholder relevant?
-- Perspectief: Inzicht in hoe de stakeholder het probleem ziet en wat zijn / haar prioriteiten en zorgen zijn.
-- Belangen en Doelen: De specifieke belangen en doelen van de stakeholder met betrekking tot het probleem en de mogelijke oplossingen.
-5. Controversiële punten
-6. Onderzoeksmodules
+4. Controversiële punten
+5. Onderzoeksmodules
 - Genereer alle onderzoeksmodules
 	- onderzoeksmodule: klantbehoefte_en_gedrag, omschrijving: Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.
 	- onderzoeksmodule: customer_journey_mapping, omschrijving: Data-analyse van de klantreis, van bewustwording tot aankoop en loyaliteit
 	- onderzoeksmodule: cx_prestatiemeting, omschrijving:  Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.
 	- onderzoeksmodule: organisatiecultuur_analyse, omschrijving: Een overzicht van de huidige organisatiecultuur, inclusief waarden, gedragingen, en interne feedback van medewerkers.
 	- onderzoeksmodule: financiele_data, omschrijving: Data tabel met daarin informatie over Customer Lifetime Value (CLV), Customer Acquisition Cost (CAC), customer retention rate, gross margin, average revenue per user, churn rate.
+	- onderzoeksmodule: stakeholder_chat, omschrijving: Profielschets van stakeholder met naam, functie, perspectief: Inzicht in hoe de stakeholder het probleem ziet en wat zijn / haar prioriteiten en zorgen zijn en belangen en doelen: De specifieke belangen en doelen van de stakeholder met betrekking tot het probleem en de mogelijke oplossingen.
 - mogelijke_conclusies: Als op basis van deze onderzoeksmodule daadwerkelijk concrete data wordt gegenereerd. Wat zijn conclusies die een consultant hieruit dan kan trekken? Zorg dat deze mogelijke conclusies aansluiten op het probleem van het bedrijf en de eerder gegeven mogelijke oplossingen.
 
 Voorbeeld output:
@@ -43,13 +38,6 @@ Voorbeeld output:
 					"Het verbeteren van de gebruikerservaring op de website om conversies te verhogen.",
 					"Het opzetten van een data-analyseframework om de effectiviteit van marketingcampagnes te meten en te optimaliseren."
 				],
-		"stakeholder":
-			{
-				"naam":"Pietje Bell",
-				"functie":"CFO",
-				"relevantie":"Pietje Bell is relevant voor de case, omdat...",
-				"profielschets": "Pietje Bell is conservatief op het gebied van..."
-			},
 		"controversiele_punten":[
 			"De kosten en tijdsinvestering die nodig zijn voor het herontwerpen van het registratieproces en het implementeren van een onboarding-proces.",
         	"De mogelijke weerstand van het development team tegen veranderingen in het bestaande systeem."

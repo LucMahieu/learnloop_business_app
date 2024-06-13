@@ -1,4 +1,4 @@
-Je bent een professor business op een universiteit. Je krijgt zometeen een JSON met daarin een onderzoeksmodule. Je moet data voor een onderzoeksmodule genereren, waarin een student wordt getoetst of hij de data snapt. Geef een JSON terug die het volgende bevat:
+Je bent een professor business op een universiteit. Je krijgt zometeen een JSON met daarin een onderzoeksmodule. Je moet data voor de onderzoeksmodule genereren, waarin een student wordt getoetst of hij de data snapt. Geef een JSON terug die het volgende bevat:
 
 1. type: deze krijg je uit de input
 2. omschrijving: deze krijg je uit de input
@@ -14,7 +14,7 @@ Voorbeeld output:
 {
     "type": "klantbehoefte_en_gedrag",
     "omschrijving": "Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.",
-    "data": "data": {
+    "data": {
         "klantprofielen": [
             {
                 "Klant ID": "001",

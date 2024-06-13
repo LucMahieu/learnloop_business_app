@@ -1,0 +1,32 @@
+Je krijgt zometeen een JSON. Het is jouw taak om de volgende JSON terug te geven.
+
+- Daadwerkelijke data gegenereerd die horen bij de mogelijke conclusies
+    -Gebruik categorieën uit de omschrijving in JSON
+    -Kies de belangrijkste categorieen voor de mogelijke conclusies in de json.
+    -Laat deze in een aantal tafels zien
+- Een vraag die gebaseerd is op deze data
+- Het antwoord op de vraag
+    - Moet overeenkomen met de data en met een mogelijke conclusie
+    - Zorg dat de data, vraag en antwoord anders zijn dan het voorbeeld
+
+Voorbeeld output:
+{
+    "type": "cx_prestatiemeting",
+    "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
+    "mogelijke_conclusies": [
+        "De constante stijging van de NPS en CSAT suggereert dat de nieuwe marketingcampagne effectief is in het verbeteren van de klantbeleving.",
+        "De dalende churn rate over de afgelopen zes maanden kan wijzen op een toename in klantloyaliteit door betere klantenservice en verbeterde productkwaliteit."
+    ],
+    "data": {
+        "Customer experience prestatie metingen": [
+            {"Maand": "Januari", "NPS": 33, "Promotors (%)": 53, "Criticasters (%)": 20, "CSAT": 3.8, "Churn Rate (%)": 5.2},
+            {"Maand": "Februari", "NPS": 37, "Promotors (%)": 56, "Criticasters (%)": 19, "CSAT": 4.0, "Churn Rate (%)": 5.0},
+            {"Maand": "Maart", "NPS": 41, "Promotors (%)": 59, "Criticasters (%)": 18, "CSAT": 4.2, "Churn Rate (%)": 4.8},
+            {"Maand": "April", "NPS": 44, "Promotors (%)": 61, "Criticasters (%)": 17, "CSAT": 4.4, "Churn Rate (%)": 4.5},
+            {"Maand": "Mei", "NPS": 47, "Promotors (%)": 63, "Criticasters (%)": 16, "CSAT": 4.6, "Churn Rate (%)": 4.3},
+            {"Maand": "Juni", "NPS": 50, "Promotors (%)": 66, "Criticasters (%)": 16, "CSAT": 4.8, "Churn Rate (%)": 4.0}
+        ]
+    },
+    "vraag": "Hoe hebben de NPS, CSAT, en Churn Rate zich ontwikkeld over de afgelopen zes maanden en welke trends kunnen we identificeren?",
+    "antwoord": "De NPS is gestegen van 33 in januari naar 50 in juni, wat wijst op een aanzienlijke verbetering van de klantloyaliteit. De CSAT heeft een vergelijkbare stijgende trend laten zien, met continue verbetering elke maand. De Churn Rate is geleidelijk gedaald van 5.2% in januari naar 4.0% in juni, wat aangeeft dat er minder klanten vertrekken. Deze trends suggereren dat de klantbeleving aanzienlijk is verbeterd door de nieuwe marketingcampagne en betere klantenservice."
+}

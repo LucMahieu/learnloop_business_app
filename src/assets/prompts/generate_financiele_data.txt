@@ -1,0 +1,33 @@
+Je krijgt zometeen een JSON. Het is jouw taak om de volgende JSON terug te geven.
+
+- Daadwerkelijke data gegenereerd die horen bij de mogelijke conclusies
+    -Gebruik categorieën uit de omschrijving in JSON
+    -Kies de belangrijkste categorieen voor de mogelijke conclusies in de json.
+    -Laat deze in een of meer tafels zien
+- Een vraag die gebaseerd is op deze data
+- Het antwoord op de vraag
+    - Moet overeenkomen met de data en met een mogelijke conclusie
+    - Zorg dat de data, vraag en antwoord anders zijn dan het voorbeeld
+
+Voorbeeld output:
+{
+    "type": "financiele_data",
+    "omschrijving": "Data tabel met daarin informatie over Customer Lifetime Value (CLV), Customer Acquisition Cost (CAC), customer retention rate, gross margin, average revenue per user, churn rate.",
+    "mogelijke_conclusies": [
+        "De stijging van de Customer Lifetime Value (CLV) en de gemiddelde opbrengst per gebruiker (ARPU) suggereert dat klanten meer waarde genereren gedurende hun levenscyclus.",
+        "De daling van de Customer Acquisition Cost (CAC) en churn rate over de afgelopen zes maanden wijst op efficiëntere marketingstrategieën en hogere klanttevredenheid."
+    ],
+    "data": {
+        "Financiële prestaties": [
+            {"Maand": "Januari", "CLV (€)": 200, "CAC (€)": 50, "Retention Rate (%)": 70, "Gross Margin (%)": 30, "ARPU (€)": 25, "Churn Rate (%)": 5},
+            {"Maand": "Februari", "CLV (€)": 220, "CAC (€)": 48, "Retention Rate (%)": 72, "Gross Margin (%)": 32, "ARPU (€)": 27, "Churn Rate (%)": 4.8},
+            {"Maand": "Maart", "CLV (€)": 230, "CAC (€)": 45, "Retention Rate (%)": 74, "Gross Margin (%)": 34, "ARPU (€)": 28, "Churn Rate (%)": 4.6},
+            {"Maand": "April", "CLV (€)": 240, "CAC (€)": 43, "Retention Rate (%)": 75, "Gross Margin (%)": 35, "ARPU (€)": 29, "Churn Rate (%)": 4.4},
+            {"Maand": "Mei", "CLV (€)": 250, "CAC (€)": 40, "Retention Rate (%)": 76, "Gross Margin (%)": 36, "ARPU (€)": 30, "Churn Rate (%)": 4.2},
+            {"Maand": "Juni", "CLV (€)": 260, "CAC (€)": 38, "Retention Rate (%)": 78, "Gross Margin (%)": 38, "ARPU (€)": 32, "Churn Rate (%)": 4.0}
+        ]
+    },
+    "vraag": "Hoe hebben de CLV, CAC, retention rate, gross margin, ARPU en churn rate zich ontwikkeld over de afgelopen zes maanden en welke trends kunnen we identificeren?",
+    "antwoord": "De CLV is gestegen van €200 in januari naar €260 in juni, wat wijst op een toename in de waarde die klanten gedurende hun levenscyclus genereren. De CAC is gedaald van €50 naar €38, wat wijst op efficiëntere marketingstrategieën. De retention rate is gestegen van 70% naar 78%, terwijl de churn rate is gedaald van 5% naar 4%. De gross margin is verbeterd van 30% naar 38%, en de ARPU is gestegen van €25 naar €32. Deze trends suggereren een algemene verbetering in klantwaarde, efficiëntie van acquisitiekosten en klanttevredenheid."
+}
+

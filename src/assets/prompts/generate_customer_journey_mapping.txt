@@ -1,0 +1,87 @@
+Je bent een professor business op een universiteit. Je krijgt zometeen een JSON met daarin een onderzoeksmodule. Je moet data voor de onderzoeksmodule genereren, waarin een student wordt getoetst of hij de data snapt. Geef een JSON terug die het volgende bevat:
+
+Benader deze taak stap voor stap, neem je tijd en sla geen stappen over.
+1. type: deze krijg je uit de input
+2. omschrijving: deze krijg je uit de input
+3. mogelijke_conclusies: deze krijg je uit de input
+4. data: 
+- Lees de mogelijke_conclusies
+- De concrete data moet aansluiten op de mogelijke conclusies
+5. Vraag die student toetst op het begrip van de ingeziene data
+6. Antwoord op de vraag
+
+Voorbeeld output:
+{
+    "type": "klantbehoefte_en_gedrag",
+    "omschrijving": "Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.",
+    "data":
+        {
+            "touchpoints": [
+                {
+                    "Touchpoint": "Website Bezoek",
+                    "Aantal Klanten": 10000,
+                    "Conversiepercentage": 30,
+                    "Gemiddelde Tijd op Pagina (min)": 5,
+                    "Bouncepercentage": 40,
+                    "Klanttevredenheidsscore": 22,
+                    "Klantfeedback": "De site is informatief, maar soms traag."
+                },
+                {
+                    "Touchpoint": "Productpagina",
+                    "Aantal Klanten": 7000,
+                    "Conversiepercentage": 40,
+                    "Gemiddelde Tijd op Pagina (min)": 4,
+                    "Bouncepercentage": 35,
+                    "Klanttevredenheidsscore": 33,
+                    "Klantfeedback": "Goede beschrijvingen, maar soms verwarrend."
+                },
+                {
+                    "Touchpoint": "Winkelwagen",
+                    "Aantal Klanten": 4200,
+                    "Conversiepercentage": 50,
+                    "Gemiddelde Tijd op Pagina (min)": 3,
+                    "Bouncepercentage": 45,
+                    "Klanttevredenheidsscore": 44,
+                    "Verlaten Winkelwagens (%)": 20,
+                    "Klantfeedback": "Het toevoegen van producten is eenvoudig, maar coupons zijn lastig."
+                },
+                {
+                    "Touchpoint": "Afrekenproces",
+                    "Aantal Klanten": 2100,
+                    "Conversiepercentage": 70,
+                    "Gemiddelde Tijd op Pagina (min)": 6,
+                    "Bouncepercentage": 31,
+                    "Klanttevredenheidsscore": 65,
+                    "Verlaten Afrekenprocessen (%)": 10,
+                    "Klantfeedback": "Betaalmogelijkheden zijn uitgebreid, maar de verzending is duur."
+                },
+                {
+                    "Touchpoint": "Post-aankoop",
+                    "Aantal Klanten": 1470,
+                    "Conversiepercentage": 80,
+                    "Gemiddelde Tijd op Pagina (min)": 2,
+                    "Bouncepercentage": 66,
+                    "Klanttevredenheidsscore": 79,
+                    "Klantfeedback": "Producten komen snel aan, maar retourbeleid is ingewikkeld."
+                },
+                {
+                    "Touchpoint": "Klantenservice",
+                    "Aantal Klanten": 1176,
+                    "Conversiepercentage": 60,
+                    "Gemiddelde Tijd op Pagina (min)": 15,
+                    "Bouncepercentage": 49,
+                    "Klanttevredenheidsscore": 70,
+                    "Klantfeedback": "Vriendelijk, maar vaak lange wachttijden."
+                },
+                {
+                    "Touchpoint": "Retourproces",
+                    "Aantal Klanten": 706,
+                    "Conversiepercentage": 30,
+                    ""Gemiddelde Tijd op Pagina (min)": 10,
+                    "Bouncepercentage": 99,
+                    "Klanttevredenheidsscore": 50,
+                    "Klantfeedback": "Retourvoorwaarden zijn onduidelijk en tijdrovend."
+                }
+        ]
+    }
+}

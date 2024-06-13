@@ -1,0 +1,137 @@
+Je bent een professor business op een universiteit. Je krijgt zometeen een JSON met daarin een onderzoeksmodule. Je moet data voor de onderzoeksmodule genereren, waarin een student wordt getoetst of hij de data snapt. Geef een JSON terug die het volgende bevat:
+
+1. type: deze krijg je uit de input
+2. omschrijving: deze krijg je uit de input
+3. mogelijke_conclusies: deze krijg je uit de input
+4. data: 
+- Lees de mogelijke_conclusies
+- genereer concrete data die aansluit bij de mogelijke_conclusies
+- Laat in je output 5 klanten terugkomen, 10 aankopen en 5 feedback
+5. Vraag die student toetst op het begrip van de ingeziene data
+6. Antwoord op de vraag
+
+Voorbeeld output:
+{
+    "type": "klantbehoefte_en_gedrag",
+    "omschrijving": "Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.",
+    "data": {
+        "klantprofielen": [
+            {
+                "Klant ID": "001",
+                "Naam": "Jan Jansen",
+                "Leeftijd": 35,
+                "Geslacht": "M",
+                "Locatie": "Amsterdam",
+                "Aantal Aankopen": 5,
+                "Terugkerende Klant": "Ja"
+            },
+            {
+                "Klant ID": "002",
+                "Naam": "Lisa de Jong",
+                "Leeftijd": 28,
+                "Geslacht": "V",
+                "Locatie": "Rotterdam",
+                "Aantal Aankopen": 7,
+                "Terugkerende Klant": "Ja"
+            },
+            {
+                "Klant ID": "003",
+                "Naam": "Mark de Vries",
+                "Leeftijd": 45,
+                "Geslacht": "M",
+                "Locatie": "Utrecht",
+                "Aantal Aankopen": 3,
+                "Terugkerende Klant": "Nee"
+            },
+            {
+                "Klant ID": "004",
+                "Naam": "Emma Bakker",
+                "Leeftijd": 32,
+                "Geslacht": "V",
+                "Locatie": "Den Haag",
+                "Aantal Aankopen": 10,
+                "Terugkerende Klant": "Ja"
+            },
+            {
+                "Klant ID": "005",
+                "Naam": "Tom Willems",
+                "Leeftijd": 29,
+                "Geslacht": "M",
+                "Locatie": "Eindhoven",
+                "Aantal Aankopen": 2,
+                "Terugkerende Klant": "Nee"
+            }
+        ],
+        "aankoopgeschiedenis": [
+            {
+                "Klant ID": "001",
+                "Aankoopdatum": "2024-01-15",
+                "Product": "Laptop",
+                "Prijs": "€899",
+                "Retourdatum": "2024-02-01",
+                "Retour Reden": "Defect"
+            },
+            {
+                "Klant ID": "002",
+                "Aankoopdatum": "2024-02-20",
+                "Product": "Smartphone",
+                "Prijs": "€699",
+                "Retourdatum": "2024-03-05",
+                "Retour Reden": "Niet zoals beschreven"
+            },
+            {
+                "Klant ID": "003",
+                "Aankoopdatum": "2024-03-10",
+                "Product": "Hoofdtelefoon",
+                "Prijs": "€199",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "004",
+                "Aankoopdatum": "2024-04-05",
+                "Product": "Tablet",
+                "Prijs": "€499",
+                "Retourdatum": "2024-04-20",
+                "Retour Reden": "Te ingewikkeld retourproces"
+            },
+            {
+                "Klant ID": "005",
+                "Aankoopdatum": "2024-05-18",
+                "Product": "Smartwatch",
+                "Prijs": "€299",
+                "Retourdatum": "2024-06-01",
+                "Retour Reden": "Onduidelijk retourvoorwaarden"
+            }
+        ],
+        "feedback_van_klanten": [
+            {
+                "Naam": "Jan Jansen",
+                "Feedback": "De producten zijn geweldig, maar het retourbeleid is te ingewikkeld en tijdrovend."
+            },
+            {
+                "Naam": "Lisa de Jong",
+                "Feedback": "Ik ben tevreden met mijn aankopen, maar het retourproces is frustrerend en onduidelijk."
+            },
+            {
+                "Naam": "Emma Bakker",
+                "Feedback": "De kwaliteit van de producten is goed, maar ik zou graag een eenvoudiger retourprocedure zien."
+            },
+            {
+                "Naam": "Mark de Vries",
+                "Feedback": "Geen problemen met mijn aankoop, gelukkig hoefde ik niets te retourneren."
+            },
+            {
+                "Naam": "Tom Willems",
+                "Feedback": "De retourvoorwaarden zijn verwarrend, het kostte me veel tijd om alles uit te zoeken."
+            }
+        ]
+    }
+    "mogelijke_conclusies": [
+        "Klanten geven aan dat het huidige retourbeleid te ingewikkeld en tijdrovend is, wat wijst op een behoefte aan een eenvoudiger proces.",
+        "Feedback van klanten toont aan dat er onduidelijkheid is over de retourvoorwaarden, wat leidt tot frustratie.",
+        "Klanten zoals Jan Jansen en Lisa de Jong waarderen de producten, maar zijn ontevreden over de retourprocedure, wat aangeeft dat het probleem specifiek bij het retourbeleid ligt."
+    ],
+    "vraag": "...?",
+    "antwoord": "..."
+}

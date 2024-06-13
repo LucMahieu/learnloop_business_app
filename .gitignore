@@ -4,8 +4,7 @@
 __pycache__/
 .idea
 .DS_Store
-./src/data/onderzoeksmodules/
-./src/data/bedrijfsoverzicht.json
-./src/data/tests
-./src/data/onderzoeksmodules_archive
-./src/data/onderzoeksmodules_archive_2
+/src/data/onderzoeksmodules/
+/src/data/bedrijfsoverzicht.json
+/src/data/tests
+/src/data/onderzoeksmodules_archive

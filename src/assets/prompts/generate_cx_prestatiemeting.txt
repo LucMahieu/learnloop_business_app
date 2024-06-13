@@ -5,6 +5,7 @@ Je krijgt zometeen een JSON. Het is jouw taak om de volgende JSON terug te geven
     -Kies de belangrijkste categorieen voor de mogelijke conclusies in de json.
     -Laat deze in een aantal tafels zien
 - Een vraag die gebaseerd is op deze data
+    - De vraag mag niet te simpel zijn
 - Het antwoord op de vraag
     - Moet overeenkomen met de data en met een mogelijke conclusie
     - Zorg dat de data, vraag en antwoord anders zijn dan het voorbeeld
@@ -14,19 +15,18 @@ Voorbeeld output:
     "type": "cx_prestatiemeting",
     "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
     "mogelijke_conclusies": [
-        "De constante stijging van de NPS en CSAT suggereert dat de nieuwe marketingcampagne effectief is in het verbeteren van de klantbeleving.",
-        "De dalende churn rate over de afgelopen zes maanden kan wijzen op een toename in klantloyaliteit door betere klantenservice en verbeterde productkwaliteit."
+        "Lage NPS scores in februari (-10) en april (-5) wijzen op een algemene ontevredenheid met het platform tijdens deze maanden, wat aangeeft dat er significante verbeteringen nodig zijn.",
+        "De klantretentiepercentages correleren met de NPS scores, waarbij lagere NPS scores gepaard gaan met lagere retentiepercentages. Dit suggereert dat verbeteringen in klanttevredenheid direct kunnen leiden tot een hogere klantloyaliteit."
     ],
     "data": {
         "Customer experience prestatie metingen": [
-            {"Maand": "Januari", "NPS": 33, "Promotors (%)": 53, "Criticasters (%)": 20, "CSAT": 3.8, "Churn Rate (%)": 5.2},
-            {"Maand": "Februari", "NPS": 37, "Promotors (%)": 56, "Criticasters (%)": 19, "CSAT": 4.0, "Churn Rate (%)": 5.0},
-            {"Maand": "Maart", "NPS": 41, "Promotors (%)": 59, "Criticasters (%)": 18, "CSAT": 4.2, "Churn Rate (%)": 4.8},
-            {"Maand": "April", "NPS": 44, "Promotors (%)": 61, "Criticasters (%)": 17, "CSAT": 4.4, "Churn Rate (%)": 4.5},
-            {"Maand": "Mei", "NPS": 47, "Promotors (%)": 63, "Criticasters (%)": 16, "CSAT": 4.6, "Churn Rate (%)": 4.3},
-            {"Maand": "Juni", "NPS": 50, "Promotors (%)": 66, "Criticasters (%)": 16, "CSAT": 4.8, "Churn Rate (%)": 4.0}
+            {"Maand": "Januari", "NPS": 30, "Klanttevredenheidsscore": 8.2, "Klantretentiepercentage": 88},
+            {"Maand": "Februari", "NPS": -10, "Klanttevredenheidsscore": 7.0, "Klantretentiepercentage": 75},
+            {"Maand": "Maart", "NPS": 25, "Klanttevredenheidsscore": 6.5, "Klantretentiepercentage": 80},
+            {"Maand": "April", "NPS": -5, "Klanttevredenheidsscore": 7.8, "Klantretentiepercentage": 85},
+            {"Maand": "Mei", "NPS": 40, "Klanttevredenheidsscore": 8.0, "Klantretentiepercentage": 90}
         ]
     },
-    "vraag": "Hoe hebben de NPS, CSAT, en Churn Rate zich ontwikkeld over de afgelopen zes maanden en welke trends kunnen we identificeren?",
-    "antwoord": "De NPS is gestegen van 33 in januari naar 50 in juni, wat wijst op een aanzienlijke verbetering van de klantloyaliteit. De CSAT heeft een vergelijkbare stijgende trend laten zien, met continue verbetering elke maand. De Churn Rate is geleidelijk gedaald van 5.2% in januari naar 4.0% in juni, wat aangeeft dat er minder klanten vertrekken. Deze trends suggereren dat de klantbeleving aanzienlijk is verbeterd door de nieuwe marketingcampagne en betere klantenservice."
+    "vraag": "Hoe beïnvloeden de NPS-scores de klantretentiepercentages?",
+    "antwoord": "De data toont aan dat lagere NPS-scores, zoals in februari (-10) en april (-5), gepaard gaan met lagere klantretentiepercentages (75% en 85% respectievelijk). Dit suggereert dat verbeteringen in NPS direct kunnen leiden tot hogere klantretentie."
 }

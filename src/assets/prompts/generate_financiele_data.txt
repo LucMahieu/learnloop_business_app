@@ -5,6 +5,7 @@ Je krijgt zometeen een JSON. Het is jouw taak om de volgende JSON terug te geven
     -Kies de belangrijkste categorieen voor de mogelijke conclusies in de json.
     -Laat deze in een of meer tafels zien
 - Een vraag die gebaseerd is op deze data
+    - De vraag mag niet te simpel zijn
 - Het antwoord op de vraag
     - Moet overeenkomen met de data en met een mogelijke conclusie
     - Zorg dat de data, vraag en antwoord anders zijn dan het voorbeeld

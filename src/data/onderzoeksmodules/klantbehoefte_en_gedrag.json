@@ -1,12 +1,164 @@
 {
     "type": "klantbehoefte_en_gedrag",
     "omschrijving": "Data over klantgedrag en -behoeften, inclusief klantprofielen, aankoopgeschiedenis, en feedback van klanten.",
+    "data": {
+        "klantprofielen": [
+            {
+                "Klant ID": "001",
+                "Naam": "Jan Jansen",
+                "Leeftijd": 35,
+                "Geslacht": "M",
+                "Locatie": "Amsterdam",
+                "Aantal Aankopen": 5,
+                "Terugkerende Klant": "Ja"
+            },
+            {
+                "Klant ID": "002",
+                "Naam": "Lisa de Jong",
+                "Leeftijd": 28,
+                "Geslacht": "V",
+                "Locatie": "Rotterdam",
+                "Aantal Aankopen": 7,
+                "Terugkerende Klant": "Ja"
+            },
+            {
+                "Klant ID": "003",
+                "Naam": "Mark de Vries",
+                "Leeftijd": 45,
+                "Geslacht": "M",
+                "Locatie": "Utrecht",
+                "Aantal Aankopen": 3,
+                "Terugkerende Klant": "Nee"
+            },
+            {
+                "Klant ID": "004",
+                "Naam": "Emma Bakker",
+                "Leeftijd": 32,
+                "Geslacht": "V",
+                "Locatie": "Den Haag",
+                "Aantal Aankopen": 10,
+                "Terugkerende Klant": "Ja"
+            },
+            {
+                "Klant ID": "005",
+                "Naam": "Sven van Dijk",
+                "Leeftijd": 29,
+                "Geslacht": "M",
+                "Locatie": "Eindhoven",
+                "Aantal Aankopen": 2,
+                "Terugkerende Klant": "Nee"
+            }
+        ],
+        "aankoopgeschiedenis": [
+            {
+                "Klant ID": "001",
+                "Aankoopdatum": "2024-01-15",
+                "Product": "Online cursus Python",
+                "Prijs": "\u20ac99",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "002",
+                "Aankoopdatum": "2024-02-20",
+                "Product": "Online cursus Data Science",
+                "Prijs": "\u20ac199",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "003",
+                "Aankoopdatum": "2024-03-10",
+                "Product": "Online cursus Web Development",
+                "Prijs": "\u20ac149",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "004",
+                "Aankoopdatum": "2024-04-05",
+                "Product": "Online cursus Machine Learning",
+                "Prijs": "\u20ac249",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "005",
+                "Aankoopdatum": "2024-05-18",
+                "Product": "Online cursus AI",
+                "Prijs": "\u20ac299",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "001",
+                "Aankoopdatum": "2024-06-15",
+                "Product": "Online cursus SQL",
+                "Prijs": "\u20ac79",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "002",
+                "Aankoopdatum": "2024-07-20",
+                "Product": "Online cursus Cloud Computing",
+                "Prijs": "\u20ac199",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "003",
+                "Aankoopdatum": "2024-08-10",
+                "Product": "Online cursus Cybersecurity",
+                "Prijs": "\u20ac149",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "004",
+                "Aankoopdatum": "2024-09-05",
+                "Product": "Online cursus DevOps",
+                "Prijs": "\u20ac249",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            },
+            {
+                "Klant ID": "005",
+                "Aankoopdatum": "2024-10-18",
+                "Product": "Online cursus Blockchain",
+                "Prijs": "\u20ac299",
+                "Retourdatum": "N.v.t.",
+                "Retour Reden": "N.v.t."
+            }
+        ],
+        "feedback_van_klanten": [
+            {
+                "Naam": "Jan Jansen",
+                "Feedback": "De cursussen zijn goed, maar ik zou graag meer praktijkgerichte opdrachten willen zien."
+            },
+            {
+                "Naam": "Lisa de Jong",
+                "Feedback": "De inhoud van de cursussen is uitstekend, maar de navigatie op het platform is verwarrend."
+            },
+            {
+                "Naam": "Emma Bakker",
+                "Feedback": "Ik ben tevreden met de kwaliteit van de cursussen, maar de klantenservice reageert traag op mijn vragen."
+            },
+            {
+                "Naam": "Mark de Vries",
+                "Feedback": "De cursussen zijn informatief, maar ik zou graag meer interactieve elementen willen zien."
+            },
+            {
+                "Naam": "Sven van Dijk",
+                "Feedback": "De content is van hoge kwaliteit, maar de klantenservice is traag in het beantwoorden van mijn vragen."
+            }
+        ]
+    },
     "mogelijke_conclusies": [
-        "Klanten geven aan dat het huidige retourbeleid te ingewikkeld en tijdrovend is, wat wijst op een behoefte aan een eenvoudiger proces.",
-        "Feedback van klanten toont aan dat er onduidelijkheid is over de retourvoorwaarden, wat leidt tot frustratie.",
-        "Klanten zoals Jan Jansen en Lisa de Jong waarderen de producten, maar zijn ontevreden over de retourprocedure, wat aangeeft dat het probleem specifiek bij het retourbeleid ligt."
+        "Klanten geven aan dat ze meer interactieve en praktijkgerichte cursussen willen, wat wijst op een behoefte aan meer hands-on leerervaringen.",
+        "Feedback van klanten zoals Jan Jansen en Lisa de Jong toont aan dat de navigatie op het platform verwarrend is, wat aangeeft dat de gebruiksvriendelijkheid verbeterd moet worden.",
+        "Klanten zoals Sven van Dijk waarderen de kwaliteit van de content, maar vinden dat de klantenservice traag reageert op vragen en problemen."
     ],
-    "vraag": "Wat is een veelvoorkomend probleem dat klanten ervaren met het huidige retourbeleid?",
-    "antwoord": "Klanten geven aan dat het huidige retourbeleid te ingewikkeld en tijdrovend is.",
-    "data": "Klanten zoals Jan Jansen en Lisa de Jong waarderen de producten, maar zijn ontevreden over de retourprocedure. Feedback van klanten toont aan dat er onduidelijkheid is over de retourvoorwaarden, wat leidt tot frustratie."
+    "vraag": "Welke verbeteringen kunnen worden doorgevoerd op basis van de feedback van de klanten?",
+    "antwoord": "Op basis van de feedback van de klanten kunnen de volgende verbeteringen worden doorgevoerd: 1) Meer interactieve en praktijkgerichte cursussen aanbieden om aan de behoefte aan hands-on leerervaringen te voldoen. 2) De gebruiksvriendelijkheid van het platform verbeteren om de navigatie minder verwarrend te maken. 3) De reactietijd van de klantenservice verkorten om sneller te reageren op vragen en problemen van klanten."
 }

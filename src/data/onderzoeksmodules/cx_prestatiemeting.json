@@ -2,15 +2,67 @@
     "type": "cx_prestatiemeting",
     "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
     "mogelijke_conclusies": [
-        "De NPS en klanttevredenheidsscores zijn gedaald sinds de invoering van het huidige retourbeleid, wat aangeeft dat het beleid een negatieve impact heeft op de klantbeleving.",
-        "Een lage klantretentie wijst erop dat ontevreden klanten minder geneigd zijn om terug te keren voor herhaalaankopen."
+        "Lage NPS scores wijzen op een algemene ontevredenheid met het platform, wat aangeeft dat er significante verbeteringen nodig zijn.",
+        "Analyse van klanttevredenheidsscores toont aan dat specifieke aspecten van het platform, zoals de gebruiksvriendelijkheid en klantenservice, de grootste pijnpunten zijn."
     ],
-    "vraag": "Wat is de huidige NPS en hoe verhoudt deze zich tot de periode voor de invoering van het nieuwe retourbeleid?",
-    "antwoord": "De huidige NPS is 45, wat een daling van 10 punten betekent ten opzichte van de periode voor de invoering van het nieuwe retourbeleid, toen de NPS 55 was.",
     "data": {
-        "huidige_NPS": 45,
-        "NPS_voor_invoering_retourbeleid": 55,
-        "klanttevredenheidsscore": 78,
-        "klantretentiepercentage": 65
-    }
+        "Customer experience prestatie metingen": [
+            {
+                "Maand": "Januari",
+                "NPS": 12,
+                "Promotors (%)": 30,
+                "Criticasters (%)": 18,
+                "CSAT": 2.8,
+                "Gebruiksvriendelijkheid": 2.5,
+                "Klantenservice": 2.7
+            },
+            {
+                "Maand": "Februari",
+                "NPS": 15,
+                "Promotors (%)": 32,
+                "Criticasters (%)": 17,
+                "CSAT": 3.0,
+                "Gebruiksvriendelijkheid": 2.7,
+                "Klantenservice": 2.9
+            },
+            {
+                "Maand": "Maart",
+                "NPS": 18,
+                "Promotors (%)": 34,
+                "Criticasters (%)": 16,
+                "CSAT": 3.2,
+                "Gebruiksvriendelijkheid": 2.9,
+                "Klantenservice": 3.1
+            },
+            {
+                "Maand": "April",
+                "NPS": 20,
+                "Promotors (%)": 36,
+                "Criticasters (%)": 16,
+                "CSAT": 3.4,
+                "Gebruiksvriendelijkheid": 3.0,
+                "Klantenservice": 3.3
+            },
+            {
+                "Maand": "Mei",
+                "NPS": 22,
+                "Promotors (%)": 38,
+                "Criticasters (%)": 16,
+                "CSAT": 3.5,
+                "Gebruiksvriendelijkheid": 3.2,
+                "Klantenservice": 3.4
+            },
+            {
+                "Maand": "Juni",
+                "NPS": 25,
+                "Promotors (%)": 40,
+                "Criticasters (%)": 15,
+                "CSAT": 3.6,
+                "Gebruiksvriendelijkheid": 3.4,
+                "Klantenservice": 3.6
+            }
+        ]
+    },
+    "vraag": "Welke aspecten van het platform hebben de grootste invloed op de lage NPS scores en hoe hebben deze scores zich ontwikkeld over de afgelopen zes maanden?",
+    "antwoord": "De lage NPS scores worden voornamelijk be\u00efnvloed door de gebruiksvriendelijkheid en de klantenservice van het platform. Hoewel er een lichte verbetering is in de NPS van 12 in januari naar 25 in juni, blijven de scores relatief laag. De klanttevredenheidsscores (CSAT) en de beoordelingen voor gebruiksvriendelijkheid en klantenservice laten een vergelijkbare lichte stijging zien, maar blijven onder de gewenste niveaus. Dit suggereert dat er significante verbeteringen nodig zijn in deze specifieke aspecten om de algehele klantbeleving te verbeteren."
 }

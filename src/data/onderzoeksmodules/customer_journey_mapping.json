@@ -2,10 +2,60 @@
     "type": "customer_journey_mapping",
     "omschrijving": "Data-analyse van de klantreis, van bewustwording tot aankoop en loyaliteit.",
     "mogelijke_conclusies": [
-        "Er zijn belangrijke touchpoints in de klantreis waar klanten afhaken vanwege het retourbeleid, wat aangeeft dat deze stappen verbeterd moeten worden.",
-        "Feedback van klanten toont aan dat er onduidelijkheid is over bepaalde fases in de retourprocedure, wat leidt tot frustratie en lagere conversie."
+        "Er zijn belangrijke touchpoints in de klantreis waar klanten afhaken, zoals tijdens het inschrijfproces, wat aangeeft dat deze stappen verbeterd moeten worden.",
+        "Feedback van klanten toont aan dat er onduidelijkheid is over bepaalde fases in de klantreis, zoals het vinden van de juiste cursus, wat leidt tot frustratie en lagere conversie."
     ],
-    "vraag": "Wat zijn de belangrijkste redenen waarom klanten afhaken tijdens de klantreis?",
-    "antwoord": "De belangrijkste redenen waarom klanten afhaken tijdens de klantreis zijn onduidelijkheden en frustraties met betrekking tot het retourbeleid en de retourprocedure.",
-    "data": "Analyse van klantfeedback en conversiegegevens toont aan dat klanten vaak afhaken bij touchpoints gerelateerd aan het retourbeleid. Specifieke feedback wijst op onduidelijkheden in de retourprocedure die leiden tot frustratie en lagere conversie."
+    "data": {
+        "touchpoints": [
+            {
+                "Touchpoint": "Website Bezoek",
+                "Aantal Klanten": 15000,
+                "Conversiepercentage": 25,
+                "Gemiddelde Tijd op Pagina (min)": 6,
+                "Bouncepercentage": 45,
+                "Klantfeedback": "De site is overzichtelijk, maar laadt soms langzaam."
+            },
+            {
+                "Touchpoint": "Cursuspagina",
+                "Aantal Klanten": 10000,
+                "Conversiepercentage": 35,
+                "Gemiddelde Tijd op Pagina (min)": 5,
+                "Bouncepercentage": 30,
+                "Klantfeedback": "De beschrijvingen zijn informatief, maar het vinden van de juiste cursus is lastig."
+            },
+            {
+                "Touchpoint": "Inschrijfproces",
+                "Aantal Klanten": 3500,
+                "Conversiepercentage": 40,
+                "Gemiddelde Tijd op Pagina (min)": 8,
+                "Verlaten Inschrijvingen (%)": 25,
+                "Klantfeedback": "Het inschrijfproces is ingewikkeld en tijdrovend."
+            },
+            {
+                "Touchpoint": "Betalingsproces",
+                "Aantal Klanten": 2625,
+                "Conversiepercentage": 60,
+                "Gemiddelde Tijd op Pagina (min)": 4,
+                "Verlaten Betalingen (%)": 15,
+                "Klantfeedback": "Betaalopties zijn voldoende, maar de betalingspagina is soms traag."
+            },
+            {
+                "Touchpoint": "Post-aankoop",
+                "Aantal Klanten": 2231,
+                "Conversiepercentage": 70,
+                "Gemiddelde Tijd op Pagina (min)": 3,
+                "Klantfeedback": "De communicatie na aankoop is goed, maar de informatie over vervolgstappen kan beter."
+            },
+            {
+                "Touchpoint": "Klantenservice",
+                "Aantal Klanten": 1785,
+                "Conversiepercentage": 55,
+                "Gemiddelde Reactietijd (min)": 20,
+                "Klanttevredenheidsscore": 65,
+                "Klantfeedback": "De klantenservice is behulpzaam, maar de wachttijden zijn lang."
+            }
+        ]
+    },
+    "vraag": "Op welke touchpoints in de klantreis haken klanten het meest af en wat zijn de mogelijke redenen hiervoor?",
+    "antwoord": "Klanten haken het meest af tijdens het inschrijfproces en het betalingsproces. Tijdens het inschrijfproces is het percentage verlaten inschrijvingen 25%, wat aangeeft dat klanten het proces ingewikkeld en tijdrovend vinden. Tijdens het betalingsproces is het percentage verlaten betalingen 15%, wat suggereert dat de traagheid van de betalingspagina een probleem is."
 }

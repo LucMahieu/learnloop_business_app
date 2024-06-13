@@ -2,11 +2,61 @@
     "type": "organisatiecultuur_analyse",
     "omschrijving": "Een overzicht van de huidige organisatiecultuur, inclusief waarden, gedragingen, en interne feedback van medewerkers.",
     "mogelijke_conclusies": [
-        "Er is een gebrek aan een uniforme klantgerichte cultuur binnen het bedrijf, wat leidt tot inconsistente klantbelevingen.",
-        "Medewerkers geven aan dat ze niet voldoende richtlijnen hebben om klantproblemen op een consistente manier op te lossen.",
-        "Er is een behoefte aan meer training en ondersteuning voor medewerkers om klantgericht te werken en consistente beslissingen te nemen."
+        "Interne feedback wijst op een gebrek aan communicatie en samenwerking tussen afdelingen, wat kan bijdragen aan de lage NPS scores.",
+        "Medewerkers geven aan dat er een behoefte is aan meer training en middelen om de klantenservice te verbeteren."
     ],
-    "vraag": "Wat is een belangrijke oorzaak van inconsistente klantbelevingen binnen het bedrijf?",
-    "antwoord": "Er is een gebrek aan een uniforme klantgerichte cultuur binnen het bedrijf.",
-    "data": "Medewerkers geven aan dat er geen duidelijke richtlijnen zijn voor het oplossen van klantproblemen, en er is een behoefte aan meer training en ondersteuning om klantgericht te werken."
+    "vraag": "Wat zijn de belangrijkste problemen die door de medewerkers worden aangegeven?",
+    "antwoord": "De belangrijkste problemen die door de medewerkers worden aangegeven zijn een gebrek aan communicatie en samenwerking tussen afdelingen, en een behoefte aan meer training en middelen om de klantenservice te verbeteren.",
+    "data": {
+        "waarden": [
+            "Transparantie",
+            "Samenwerking",
+            "Klantgerichtheid",
+            "Innovatie"
+        ],
+        "gedragingen": [
+            {
+                "gedrag": "Communicatie tussen afdelingen",
+                "percentage_medewerkers": 45,
+                "feedback": "Er is een gebrek aan effectieve communicatie tussen de afdelingen, wat leidt tot misverstanden en ineffici\u00ebnties."
+            },
+            {
+                "gedrag": "Samenwerking tussen afdelingen",
+                "percentage_medewerkers": 50,
+                "feedback": "De samenwerking tussen afdelingen is onvoldoende, wat de algehele prestaties van het bedrijf be\u00efnvloedt."
+            },
+            {
+                "gedrag": "Focus op klantenservice",
+                "percentage_medewerkers": 55,
+                "feedback": "Veel medewerkers vinden dat er meer training en middelen nodig zijn om de klantenservice te verbeteren."
+            },
+            {
+                "gedrag": "Gebruik van innovatieve oplossingen",
+                "percentage_medewerkers": 35,
+                "feedback": "Er is behoefte aan meer ruimte voor innovatieve idee\u00ebn en oplossingen."
+            }
+        ],
+        "interne_feedback": [
+            {
+                "medewerker_id": "001",
+                "feedback": "De communicatie tussen afdelingen moet worden verbeterd om effici\u00ebnter te kunnen werken."
+            },
+            {
+                "medewerker_id": "002",
+                "feedback": "Er is een gebrek aan samenwerking tussen verschillende teams, wat leidt tot vertragingen."
+            },
+            {
+                "medewerker_id": "003",
+                "feedback": "We hebben meer training en middelen nodig om de klantenservice te verbeteren."
+            },
+            {
+                "medewerker_id": "004",
+                "feedback": "Er is onvoldoende ondersteuning vanuit het management om klantgericht te werken."
+            },
+            {
+                "medewerker_id": "005",
+                "feedback": "Meer middelen en training zouden helpen om de klantbeleving te verbeteren."
+            }
+        ]
+    }
 }

@@ -128,11 +128,11 @@ class Case:
     def overview_screen(self):
         st.title("Overzicht")
         if not os.path.exists('./data/bedrijfsoverzicht.json'):
-            st.write("Een moment geduld, het overzicht wordt gegenereerd...")
-            bedrijfsoverzicht = self.generate_overview()
-            print("Generating onderzoeksmodules")
-            self.generate_onderzoeksmodules(bedrijfsoverzicht)
-            print("Succesfully generated onderzoeksmodules")
+            with st.spinner("Een moment, het bedrijf en onderzoeksmodules worden gegenereerd..."):
+                bedrijfsoverzicht = self.generate_overview()
+                print("Generating onderzoeksmodules")
+                self.generate_onderzoeksmodules(bedrijfsoverzicht)
+                print("Succesfully generated onderzoeksmodules")
             if bedrijfsoverzicht:
                 st.rerun()
             else:
@@ -143,9 +143,10 @@ class Case:
             bedrijfsoverzicht = self.load_overview()
             st.write(bedrijfsoverzicht)
             if len(os.listdir('./data/onderzoeksmodules/')) == 0:
-                print("Generating onderzoeksmodules")
-                self.generate_onderzoeksmodules(bedrijfsoverzicht)
-                print("Succesfully generated onderzoeksmodules")
+                with st.spinner("Een moment geduld, de onderzoeksmodules worden gegenereerd"):
+                    print("Generating onderzoeksmodules")
+                    self.generate_onderzoeksmodules(bedrijfsoverzicht)
+                    print("Succesfully generated onderzoeksmodules")
         col1, col2 = st.columns([1, 1])
         with col1:
             if st.button("Ga terug"):
@@ -167,18 +168,31 @@ class Case:
         else:
             st.write("Alle modules voltooid!")
 
-        col1, col2 = st.columns([1, 1])
+        if module.get("type") != "stakeholder_chat":
+            vraag = module.get("vraag")
+            st.subheader(f"{vraag}")
+            student_answer = st.text_area("Jouw antwoord:")
+        
+        col1, col2, col3 = st.columns([1,2,1])
         if current_index != 0:
             with col1:
-                if st.button("Vorige module") and current_index > 0:
+                if st.button("Vorige module", use_container_width=True) and current_index > 0:
                     st.session_state.current_module_index -= 1
                     st.rerun()
-
-        if current_index != len(modules)-1:
+        if module.get("type") != "stakeholder_chat":
             with col2:
-                if st.button("Volgende module") and current_index < len(modules) - 1:
+                if st.button("Controleer Antwoord", use_container_width=True):
+                    feedback = self.check_answer(
+                        module["vraag"], student_answer, module["antwoord"])
+                    st.write(f"{feedback}.")
+        
+        if current_index != len(modules)-1:
+            with col3:
+                if st.button("Volgende module", use_container_width=True) and current_index < len(modules) - 1:
                     st.session_state.current_module_index += 1
                     st.rerun()
+
+
 
         if current_index == len(modules)-1:
             with col2:
@@ -199,34 +213,10 @@ class Case:
         st.header(module.get("type").replace("_", " ").capitalize())
 
         data = module.get("data")
-        # data = {
-        #     "Financiële prestaties": [
-        #         {"Maand": "Januari", "CLV (€)": 150, "CAC (€)": 70, "Retention Rate (%)": 65,
-        #          "Gross Margin (%)": 25, "ARPU (€)": 20, "Churn Rate (%)": 6},
-        #         {"Maand": "Februari", "CLV (€)": 160, "CAC (€)": 68, "Retention Rate (%)": 67,
-        #          "Gross Margin (%)": 27, "ARPU (€)": 22, "Churn Rate (%)": 5.8},
-        #         {"Maand": "Maart", "CLV (€)": 170, "CAC (€)": 66, "Retention Rate (%)": 68,
-        #          "Gross Margin (%)": 28, "ARPU (€)": 24, "Churn Rate (%)": 5.6},
-        #         {"Maand": "April", "CLV (€)": 180, "CAC (€)": 64, "Retention Rate (%)": 69,
-        #          "Gross Margin (%)": 29, "ARPU (€)": 25, "Churn Rate (%)": 5.4},
-        #         {"Maand": "Mei", "CLV (€)": 190, "CAC (€)": 62, "Retention Rate (%)": 71,
-        #          "Gross Margin (%)": 30, "ARPU (€)": 27, "Churn Rate (%)": 5.2},
-        #         {"Maand": "Juni", "CLV (€)": 200, "CAC (€)": 60, "Retention Rate (%)": 73,
-        #          "Gross Margin (%)": 32, "ARPU (€)": 28, "Churn Rate (%)": 5.0}
-        #     ]
-        # }
 
         for title in data:
             self.show_table(title, data[title])
-        vraag = module.get("vraag")
-        st.subheader(f"{vraag}")
-        student_answer = st.text_area("Jouw antwoord:")
-
-        # Button to check the answer
-        if st.button("Controleer Antwoord"):
-            feedback = self.check_answer(
-                module["vraag"], student_answer, module["antwoord"])
-            st.write(f"{feedback}.")
+        
 
     def show_module(self, module):
         module_type = module.get("type")

@@ -10,64 +10,72 @@ Stappen om een presentatie slide inhoudelijk te beoordelen:
     - Beoordeel de duidelijkheid van de belangrijkste punten.
     - Controleer of er voldoende kwalitatieve of kwantitatieve gegevens zijn om de claims te ondersteunen.
     - Beoordeel of de informatie goed gestructureerd en gemakkelijk te begrijpen is.
-3. **Geef feedback op basis van de analyse:**
-    - **Feedback:**
-        - Geef constructieve feedback die zowel de sterke punten als de verbeterpunten benadrukt.
-    - **Suggesties:**
-        - Bied specifieke suggesties voor verbeteringen, zoals:
-            - Verdieping van een onderwerp.
-            - Toevoegen van meer data en bewijs.
-            - Gebruik van grafieken of diagrammen.
-            - Toevoegen van verduidelijkende teksten.
-4. **Herhaal en verfijn:**
-    - Doorloop het stappenplan opnieuw om te controleren of alle onderdelen logisch op elkaar volgen.
-    - Optimaliseer waar nodig om de duidelijkheid en logica te verhogen.
+    - Beoordeel of de persoon genoeg diepgang heeft opgezocht in de case.
+3. **Geef feedback op basis van de analyse in onderstaande format en het format van de voorbeeld feedback op slides:**
+    ## [Soort slide / titel slide]
+    ### Feedback:
+    [Geef constructieve feedback die zowel de sterke punten als de verbeterpunten benadrukt en ga niet in op de vormgeving, alleen op inhoud.]
 
-Voorbeeld output:
-# Introductie slide
+    ### Suggesties:
+    [Bied specifieke suggesties voor verbeteringen, zoals verdieping van een onderwerp, toevoegen van meer data en bewijs, gebruik van grafieken of diagrammen, toevoegen van verduidelijkende teksten. Bied geen suggesties voor opmaak, kleur, design etc.]
+
+Voorbeeld feedback op slides:
+## Introductie slide
 
 ### Feedback:
-De introductie geeft een goed overzicht van het onderwerp, maar mist een pakkende opening die de aandacht van het publiek trekt.
+
+De introductie biedt een goed overzicht van het onderwerp en de case, maar mist een element dat direct de aandacht van het publiek trekt.
 
 ### Suggesties:
-Begin met een krachtige uitspraak of een intrigerende vraag om de interesse te wekken, zoals "Wist u dat 70% van de studenten moeite heeft met praktische feedback tijdens hun studie?"
 
-# Probleemstelling slide
+Begin met een boeiende anekdote of een opvallend feit gerelateerd aan de case om de interesse te wekken. Bijvoorbeeld: "Tijdens mijn stage ontdekte ik dat 80% van de bedrijven hun klantenserviceprocessen niet effectief benutten, wat resulteerde in aanzienlijke omzetverliezen."
+
+## Bedrijf en brancheanalyse slide
 
 ### Feedback:
-De problemen worden duidelijk geïdentificeerd; echter, kwalitatieve of kwantitatieve gegevens om de ernst van deze problemen te benadrukken zouden voor een sterkere validatie zorgen.
+
+De slide biedt een uitgebreide beschrijving van het bedrijf en de branche, maar mist visuele ondersteuning om de gegevens aantrekkelijker en begrijpelijker te maken.
 
 ### Suggesties:
-Overweeg om een korte statistiek of testimonial naast elk punt toe te voegen om de marktrelevantie te demonstreren en het probleem te valideren, bijvoorbeeld "Uit onderzoek blijkt dat 60% van de studenten inadequate praktische feedback als een belemmering voor het leren ervaart."
 
-# Oplossing slide
+Voeg grafieken of infographics toe om de belangrijkste gegevens en trends in de branche te illustreren. Bijvoorbeeld: "Een grafiek die de groei van de marktsegmenten laat zien, versterkt uw betoog en maakt het gemakkelijker te begrijpen."
+
+## Probleemstelling slide
 
 ### Feedback:
-De oplossing is duidelijk en hint op een innovatieve aanpak, maar mist expliciete differentiatie van bestaande methoden.
+
+De problemen worden goed geïdentificeerd en gepresenteerd, maar missen diepgang in de analyse van de oorzaken en gevolgen van deze problemen.
 
 ### Suggesties:
-Benadruk eventuele eigen technologieën of unieke methoden door te zeggen, bijvoorbeeld "LearnLoop's AI-gedreven feedbackmechanisme past zich uniek aan individuele leerstijlen aan, anders dan enig bestaand platform." Overweeg ook een grafiek of stroomdiagram om visueel de impact van de oplossing te demonstreren.
 
-# Traction slide
+Gebruik meer gedetailleerde voorbeelden en gegevens om de problemen te illustreren. Bijvoorbeeld: "Klanten gaven aan dat de responstijd van de klantenservice gemiddeld 5 dagen was, wat leidde tot een klanttevredenheidsscore van slechts 60%."
+
+## Oplossing slide
 
 ### Feedback:
-Toont indrukwekkende betrokkenheid en verbetering in slagingspercentages, maar mist visuele elementen. De rol van de UvA kan beter worden uitgelegd.
+
+De voorgestelde oplossing is innovatief, maar de slide biedt geen gedetailleerd stappenplan of implementatiestrategie.
 
 ### Suggesties:
-Voeg een grafiek toe om de verbetering in betrokkenheid en slagingspercentages te visualiseren. Verduidelijk de betekenis van de UvA-deal, bijvoorbeeld "Partnerschap met UvA toont inzet van een gerenommeerde instelling en dient als springplank voor bredere adoptie door universiteiten."
 
-# Business model/revenue slide
+Beschrijf de implementatiestappen in detail en voeg een tijdlijn toe om te laten zien hoe de oplossing uitgerold zal worden. Bijvoorbeeld: "Stap 1: Analyse van huidige processen (maand 1), Stap 2: Training van personeel (maand 2-3), Stap 3: Implementatie van nieuwe software (maand 4-6)."
+
+## Resultaten en impact slide
 
 ### Feedback:
-Het verdienmodel wordt gedetailleerd en duidelijk gepresenteerd, hoewel de prijzen voor bulklicenties vaag zijn.
+
+De verwachte resultaten zijn duidelijk beschreven, maar missen kwantitatieve doelstellingen en meetbare indicatoren.
 
 ### Suggesties:
-Geef een specifieke range of voorbeeldberekening voor bulklicentieprijzen om de transparantie te verbeteren, zoals "Bulk Licenties: €15-€18/student per cursus, met getrapte kortingen op basis van volume."
 
-# Marktpotentieel slide
+Voeg specifieke KPI's toe om het succes van de oplossing te meten. Bijvoorbeeld: "We verwachten een vermindering van de responstijd naar 1 dag en een stijging van de klanttevredenheidsscore naar 90% binnen 6 maanden na implementatie."
+
+## Conclusie en aanbevelingen slide
 
 ### Feedback:
-De slide somt potentiële marktgroottes op, maar biedt geen context voor de betekenis van de cijfers of gaat niet in op specifieke doelgroepen.
+
+De conclusie vat de case goed samen, maar de aanbevelingen zijn te algemeen en missen concrete actiepunten.
 
 ### Suggesties:
-Voeg kwantitatieve gegevens toe om de marktpotentie te valideren, zoals "€2 miljard potentiële markt in het Europese hoger onderwijs op basis van gemiddelde licentiekosten en adoptiepercentages." Specificeer een primaire doelgroep voor de initiële focus, bijvoorbeeld "Richten op topuniversiteiten met actieve leerinitiatieven."
+
+Geef specifieke aanbevelingen met duidelijke actiepunten. Bijvoorbeeld: "1. Implementeer een nieuw CRM-systeem binnen het eerste kwartaal. 2. Voer maandelijkse trainingssessies voor klantenservicepersoneel in. 3. Stel een feedbackmechanisme in om continue verbetering te waarborgen."

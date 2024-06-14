@@ -1,14 +1,44 @@
-Hier volgt een afbeelding van een slide die onderdeel uitmaakt van een presentatie over een case met betrekking tot een fictief bedrijf. Geef een cijfer van 0 tot 10 voor deze slide met behulp van de volgende rubrieken:
+Hier volgt een afbeelding van een slide die onderdeel uitmaakt van een presentatie over een case met betrekking tot een fictief bedrijf. Geef een cijfer van 0 tot 10 voor deze slide met behulp van de volgende rubriek.
 
-Strategische inzichten: Beoordeel de mate waarin de slide strategische inzichten biedt die relevant zijn voor de case en de oplossing.
+Strategische inzichten:
 
-Analyse en redenering: Beoordeel de grondigheid van de analyse en de logica van de redenering die op de slide wordt gepresenteerd.
+- 1 punt: De slide biedt geen strategische inzichten die relevant zijn voor de case en de oplossing.
+- 2 punten: De slide biedt minimale strategische inzichten, maar deze zijn oppervlakkig en niet goed uitgewerkt.
+- 3 punten: De slide biedt enkele relevante strategische inzichten, maar deze zijn niet volledig of diepgaand.
+- 4 punten: De slide biedt goed uitgewerkte strategische inzichten die relevant zijn voor de case en de oplossing.
+- 5 punten: De slide biedt zeer diepgaande en uitgebreide strategische inzichten die uitstekend aansluiten bij de case en de oplossing.
 
-Innovativiteit en originaliteit: Beoordeel hoe innovatief en origineel de voorgestelde oplossing of benadering op de slide is.
+Analyse en redenering:
 
-Ondersteunend bewijs en data: Beoordeel de kwaliteit en relevantie van het ondersteunend bewijs en de data die op de slide worden gepresenteerd.
+- 1 punt: De analyse en redenering zijn afwezig of zeer gebrekkig.
+- 2 punten: De analyse is oppervlakkig en de redenering bevat aanzienlijke fouten of hiaten.
+- 3 punten: De analyse is redelijk, maar vertoont enkele tekortkomingen in de logica en redenering.
+- 4 punten: De analyse is grondig en de redenering is over het algemeen logisch en goed onderbouwd.
+- 5 punten: De analyse is zeer gedetailleerd en de redenering is uitstekend, met sterke logische onderbouwing.
 
-Professionele presentatie: Beoordeel het algemene niveau van de professionele presentatie van de slide, inclusief lay-out en leesbaarheid.
+Innovativiteit en originaliteit:
+
+- 1 punt: De oplossing of benadering is niet innovatief of origineel.
+- 2 punten: De oplossing heeft enige mate van originaliteit, maar mist significante innovatie.
+- 3 punten: De oplossing is redelijk innovatief en vertoont enige originaliteit.
+- 4 punten: De oplossing is innovatief en origineel, met duidelijke nieuwe ideeën.
+- 5 punten: De oplossing is zeer innovatief en origineel, met uitzonderlijk creatieve en nieuwe benaderingen.
+
+Ondersteunend bewijs en data:
+
+- 1 punt: Er is geen ondersteunend bewijs of data op de slide.
+- 2 punten: Het bewijs en de data zijn minimaal en niet overtuigend.
+- 3 punten: Het bewijs en de data zijn redelijk, maar vertonen enkele hiaten in relevantie of kwaliteit.
+- 4 punten: Het bewijs en de data zijn van hoge kwaliteit en relevant voor de case.
+- 5 punten: Het bewijs en de data zijn van uitstekende kwaliteit en zeer relevant en overtuigend.
+
+Professionele presentatie:
+
+- 1 punt: De presentatie is onprofessioneel, met aanzienlijke problemen in lay-out en leesbaarheid.
+- 2 punten: De presentatie heeft een aantal professionele elementen, maar vertoont duidelijke tekortkomingen.
+- 3 punten: De presentatie is redelijk professioneel, met enkele kleine verbeterpunten in lay-out en leesbaarheid.
+- 4 punten: De presentatie is professioneel, goed gestructureerd en gemakkelijk leesbaar.
+- 5 punten: De presentatie is van zeer hoge professionele standaard, met uitstekende lay-out en leesbaarheid.
 
 Volg de instructies nauwkeurig en neem de tijd. Verwerk de cijfers voor deze vijf criteria in een JSON output.
 

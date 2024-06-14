@@ -25,7 +25,7 @@ class FeedbackOpSlides:
         st.subheader("Evaluatie")
         st.markdown(score.to_html(index=False, classes='wide-table'), unsafe_allow_html=True)
         st.write("\n")
-        total_score = score['Score'].sum() / 5
+        total_score = score['Score'].sum() / 2.5
         st.subheader(f"Score: {total_score}")
 
     

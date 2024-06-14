@@ -3,7 +3,7 @@ import json
 import os
 from utils.openai_client import connect_to_openai
 import pandas as pd
-from StakeholderChat import StakeholderChat
+from src.modules.StakeholderChat import StakeholderChat
 
 
 class Case:
@@ -16,9 +16,6 @@ class Case:
             st.session_state.page = "home"
 
         if "probleemstelling" not in st.session_state:
-            # st.session_state.probleemstelling = 'Bij LearnLoop leidt het gebrek aan duidelijke doelstellingen en KPIs voor klanttevreden""eid ertoe dat alle teams ad hoc beslissingen nemen bij het oplossen van klantproblemen, zoals retouren en restituties, wat resulteert in inconsistente klantbeleving en verwarring bij klanten over het retourbeleid.'
-            # st.session_state.probleemstelling = 'Klanten van LearnLoop zijn ontevreden over het retourbeleid'
-            # st.session_state.probleemstelling = 'Klanten van LearnLoop vinden de site niet duidelijk'
             st.session_state.probleemstelling = 'LearnLoop heeft lage NPS scores'
         if "overview" not in st.session_state:
             st.session_state.overview = None
@@ -147,13 +144,13 @@ class Case:
                     print("Generating onderzoeksmodules")
                     self.generate_onderzoeksmodules(bedrijfsoverzicht)
                     print("Succesfully generated onderzoeksmodules")
-        col1, col2 = st.columns([1, 1])
+        col1, col3 = st.columns([1, 2, 1])
         with col1:
-            if st.button("Ga terug"):
+            if st.button("Ga terug",use_container_width=True):
                 st.session_state.page = "home"
                 st.rerun()
-        with col2:
-            if st.button("Ga naar onderzoeksmodules"):
+        with col3:
+            if st.button("Ga naar onderzoeksmodules", use_container_width=True):
                 st.session_state.page = "onderzoeksmodules"
                 st.rerun()
 
@@ -206,7 +203,6 @@ class Case:
     def show_table(self, title, table):
         st.header(title.replace("_", " ").capitalize())
         df = pd.DataFrame(table)
-        # df.set_index(df.columns[0], inplace=True) # To set the first column as the index, for example month
         st.table(df)
 
     def show_module_tables(self, module):

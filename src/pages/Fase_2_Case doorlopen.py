@@ -195,7 +195,7 @@ class Case:
         if module.get("type") != "stakeholder_chat":
             vraag = module.get("vraag")
             st.subheader(f"{vraag}")
-            st.session_state.student_answer = st.text_area(label='', value=st.session_state.student_answer, key="temp_student_answer")
+            st.session_state.student_answer = st.text_area(label='', label_visibility="hidden", value=st.session_state.student_answer, key="temp_student_answer")
 
             col1, col2, col3 = st.columns([1,2,1])
             feedback = None

@@ -38,7 +38,9 @@ def pptx_to_pdf(input_file_path, output_file_path):
     pythoncom.CoUninitialize()
 
 def pdf_to_base64_images(pdf_path):
-    images = convert_from_path(pdf_path)
+    poppler_path = r"C:\Program Files\poppler-24.02.0\Library\bin"
+    images = convert_from_path(pdf_path, poppler_path=poppler_path)
+
     base64_images = []
     for image in images:
         buffered = BytesIO()
@@ -71,11 +73,6 @@ class PowerPoint:
         return temp_dir.name
 
     def pptx_image_base64_list(self, input_file_path, output_file_path):
-        print(f"""
-              \n\n
-              INPUT FILE PATH: {input_file_path}
-            \n\n
-        """)
         pptx_to_pdf(input_file_path, output_file_path)
         image_base64_list = pdf_to_base64_images(output_file_path)
         return image_base64_list

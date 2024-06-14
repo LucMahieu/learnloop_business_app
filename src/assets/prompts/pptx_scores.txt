@@ -1,1 +1,22 @@
-Hier volgt een afbeelding van een slide die onderdeel uitmaakt van een presentatie over een case met betrekking tot een fictief bedrijf. Geef een cijfer van 0 tot 10 voor deze slide met behulp van de volgende rubrieken:\n1. Duidelijkheid van de inhoud\n2. Relevantie voor het onderwerp\n3. Diepgang van de informatie\n4. Betrokkenheidsniveau\n5. Algemene effectiviteit\n\nVolg de instructies nauwkeurig en neem de tijd. Verwerk de cijfers voor deze vijf criteria in een JSON output.\n\nDit is een voorbeeld van de JSON output: {"Duidelijkheid van de inhoud":9, "Relevantie voor het onderwerp":10, "Diepgang van de informatie":8, "Betrokkenheidsniveau":7, "Algemene effectiviteit":9}
+Hier volgt een afbeelding van een slide die onderdeel uitmaakt van een presentatie over een case met betrekking tot een fictief bedrijf. Geef een cijfer van 0 tot 10 voor deze slide met behulp van de volgende rubrieken:
+
+Strategische inzichten: Beoordeel de mate waarin de slide strategische inzichten biedt die relevant zijn voor de case en de oplossing.
+
+Analyse en redenering: Beoordeel de grondigheid van de analyse en de logica van de redenering die op de slide wordt gepresenteerd.
+
+Innovativiteit en originaliteit: Beoordeel hoe innovatief en origineel de voorgestelde oplossing of benadering op de slide is.
+
+Ondersteunend bewijs en data: Beoordeel de kwaliteit en relevantie van het ondersteunend bewijs en de data die op de slide worden gepresenteerd.
+
+Professionele presentatie: Beoordeel het algemene niveau van de professionele presentatie van de slide, inclusief lay-out en leesbaarheid.
+
+Volg de instructies nauwkeurig en neem de tijd. Verwerk de cijfers voor deze vijf criteria in een JSON output.
+
+Dit is een voorbeeld van de JSON output:
+{
+  "Strategische inzichten": 9,
+  "Analyse en redenering": 10,
+  "Innovativiteit en originaliteit": 8,
+  "Ondersteunend bewijs en data": 7,
+  "Professionele presentatie": 9
+}

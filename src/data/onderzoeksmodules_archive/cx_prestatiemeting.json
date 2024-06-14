@@ -1,0 +1,11 @@
+{
+    "type": "cx_prestatiemeting",
+    "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
+    "mogelijke_conclusies": [
+        "Lage NPS en klanttevredenheidsscores wijzen op een algemene ontevredenheid onder klanten, vooral met betrekking tot retouren en restituties.",
+        "Een daling in klantretentiepercentages kan worden gekoppeld aan negatieve ervaringen met de klantenservice en het retourbeleid.",
+        "Analyse van klanttevredenheidsscores toont aan dat klanten die problemen hebben met retouren significant lagere scores geven."
+    ],
+    "vraag": "",
+    "antwoord": ""
+}

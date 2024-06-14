@@ -4,4 +4,9 @@
 __pycache__/
 .idea
 .DS_Store
-.venv
+src/data/onderzoeksmodules/*
+src/data/bedrijfsoverzicht.json
+src/data/bedrijfsoverzicht_archive.json
+src/data/tests
+src/data/onderzoeksmodules_archive*
+src/data/bedrijfsoverzicht.json

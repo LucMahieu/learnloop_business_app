@@ -1,0 +1,32 @@
+Je krijgt zometeen een JSON. Het is jouw taak om de volgende JSON terug te geven.
+
+- Daadwerkelijke data gegenereerd die horen bij de mogelijke conclusies
+    -Gebruik categorieën uit de omschrijving in JSON
+    -Kies de belangrijkste categorieen voor de mogelijke conclusies in de json.
+    -Laat deze in een aantal tafels zien
+- Een vraag die gebaseerd is op deze data
+    - De vraag mag niet te simpel zijn
+- Het antwoord op de vraag
+    - Moet overeenkomen met de data en met een mogelijke conclusie
+    - Zorg dat de data, vraag en antwoord anders zijn dan het voorbeeld
+
+Voorbeeld output:
+{
+    "type": "cx_prestatiemeting",
+    "omschrijving": "Data over de prestaties van de huidige klantbeleving, inclusief NPS (Net Promoter Score), klanttevredenheidsscores, en klantretentiepercentages.",
+    "mogelijke_conclusies": [
+        "Lage NPS scores in februari (-10) en april (-5) wijzen op een algemene ontevredenheid met het platform tijdens deze maanden, wat aangeeft dat er significante verbeteringen nodig zijn.",
+        "De klantretentiepercentages correleren met de NPS scores, waarbij lagere NPS scores gepaard gaan met lagere retentiepercentages. Dit suggereert dat verbeteringen in klanttevredenheid direct kunnen leiden tot een hogere klantloyaliteit."
+    ],
+    "data": {
+        "Customer experience prestatie metingen": [
+            {"Maand": "Januari", "NPS": 30, "Klanttevredenheidsscore": 8.2, "Klantretentiepercentage": 88},
+            {"Maand": "Februari", "NPS": -10, "Klanttevredenheidsscore": 7.0, "Klantretentiepercentage": 75},
+            {"Maand": "Maart", "NPS": 25, "Klanttevredenheidsscore": 6.5, "Klantretentiepercentage": 80},
+            {"Maand": "April", "NPS": -5, "Klanttevredenheidsscore": 7.8, "Klantretentiepercentage": 85},
+            {"Maand": "Mei", "NPS": 40, "Klanttevredenheidsscore": 8.0, "Klantretentiepercentage": 90}
+        ]
+    },
+    "vraag": "Hoe beïnvloeden de NPS-scores de klantretentiepercentages?",
+    "antwoord": "De data toont aan dat lagere NPS-scores, zoals in februari (-10) en april (-5), gepaard gaan met lagere klantretentiepercentages (75% en 85% respectievelijk). Dit suggereert dat verbeteringen in NPS direct kunnen leiden tot hogere klantretentie."
+}

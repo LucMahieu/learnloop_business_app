@@ -54,11 +54,17 @@ class Case:
         return modules
 
     def home_screen(self):
-        st.title("Welkom bij het doorlopen van de case")
-        st.write(
-            "Dit is het beginscherm. Klik op de knop hieronder om verder te gaan.")
-        col1 = st.columns([1])
-        if st.button("Ga naar overzichtsscherm", use_container_width=True):
+        
+        st.title("Welkom")
+        st.write(f"We gaan werken met een probleemstelling die als basis zal dienen voor de interactieve case. \n\n De standaard probleemstelling is: **{st.session_state.probleemstelling}**")
+        
+        if st.button("Gebruik deze probleemstelling", use_container_width=True):
+            st.session_state.page = "overview_screen"
+            st.rerun()
+        st.write("Je hebt ook de mogelijkheid om een **eigen probleemstelling** te kiezen en daarmee te werken.")
+        probleemstelling_input = st.text_input("Vul hieronder je eigen probleemstelling in:")
+        if st.button("Gebruik eigen probleemstelling",use_container_width=True):
+            st.session_state.probleemstelling = probleemstelling_input
             st.session_state.page = "overview_screen"
             st.rerun()
 
@@ -130,7 +136,7 @@ class Case:
     def overview_screen(self):
         st.title("Overzicht")
         if not os.path.exists('./data/bedrijfsoverzicht.json'):
-            with st.spinner("Een moment, het bedrijf en onderzoeksmodules worden gegenereerd..."):
+            with st.spinner("Een moment, het fictieve bedrijf en de bijbehorende onderzoeksmodules worden gegenereerd..."):
                 bedrijfsoverzicht = self.generate_overview()
                 print("Generating onderzoeksmodules")
                 self.generate_onderzoeksmodules(bedrijfsoverzicht)

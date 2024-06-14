@@ -1,1 +1,73 @@
-Hier volgt een afbeelding van een slide die onderdeel uitmaakt van een presentatie over een case met betrekking tot een fictief bedrijf. Geef feedback en suggesties op deze slide.
+Hier volgt een afbeelding van een slide die onderdeel uitmaakt van een presentatie over een case met betrekking tot een fictief bedrijf.
+
+Stappen om een presentatie slide inhoudelijk te beoordelen:
+
+1. **Identificeer het onderwerp van de slide:**
+    - Lees de titel van de slide.
+    - Bekijk de hoofdpunten op de slide.
+    - Analyseer eventuele ondersteunende afbeeldingen of grafieken.
+2. **Analyseer de huidige inhoud:**
+    - Beoordeel de duidelijkheid van de belangrijkste punten.
+    - Controleer of er voldoende kwalitatieve of kwantitatieve gegevens zijn om de claims te ondersteunen.
+    - Beoordeel of de informatie goed gestructureerd en gemakkelijk te begrijpen is.
+3. **Geef feedback op basis van de analyse:**
+    - **Feedback:**
+        - Geef constructieve feedback die zowel de sterke punten als de verbeterpunten benadrukt.
+    - **Suggesties:**
+        - Bied specifieke suggesties voor verbeteringen, zoals:
+            - Verdieping van een onderwerp.
+            - Toevoegen van meer data en bewijs.
+            - Gebruik van grafieken of diagrammen.
+            - Toevoegen van verduidelijkende teksten.
+4. **Herhaal en verfijn:**
+    - Doorloop het stappenplan opnieuw om te controleren of alle onderdelen logisch op elkaar volgen.
+    - Optimaliseer waar nodig om de duidelijkheid en logica te verhogen.
+
+Voorbeeld output:
+# Introductie slide
+
+### Feedback:
+De introductie geeft een goed overzicht van het onderwerp, maar mist een pakkende opening die de aandacht van het publiek trekt.
+
+### Suggesties:
+Begin met een krachtige uitspraak of een intrigerende vraag om de interesse te wekken, zoals "Wist u dat 70% van de studenten moeite heeft met praktische feedback tijdens hun studie?"
+
+# Probleemstelling slide
+
+### Feedback:
+De problemen worden duidelijk geïdentificeerd; echter, kwalitatieve of kwantitatieve gegevens om de ernst van deze problemen te benadrukken zouden voor een sterkere validatie zorgen.
+
+### Suggesties:
+Overweeg om een korte statistiek of testimonial naast elk punt toe te voegen om de marktrelevantie te demonstreren en het probleem te valideren, bijvoorbeeld "Uit onderzoek blijkt dat 60% van de studenten inadequate praktische feedback als een belemmering voor het leren ervaart."
+
+# Oplossing slide
+
+### Feedback:
+De oplossing is duidelijk en hint op een innovatieve aanpak, maar mist expliciete differentiatie van bestaande methoden.
+
+### Suggesties:
+Benadruk eventuele eigen technologieën of unieke methoden door te zeggen, bijvoorbeeld "LearnLoop's AI-gedreven feedbackmechanisme past zich uniek aan individuele leerstijlen aan, anders dan enig bestaand platform." Overweeg ook een grafiek of stroomdiagram om visueel de impact van de oplossing te demonstreren.
+
+# Traction slide
+
+### Feedback:
+Toont indrukwekkende betrokkenheid en verbetering in slagingspercentages, maar mist visuele elementen. De rol van de UvA kan beter worden uitgelegd.
+
+### Suggesties:
+Voeg een grafiek toe om de verbetering in betrokkenheid en slagingspercentages te visualiseren. Verduidelijk de betekenis van de UvA-deal, bijvoorbeeld "Partnerschap met UvA toont inzet van een gerenommeerde instelling en dient als springplank voor bredere adoptie door universiteiten."
+
+# Business model/revenue slide
+
+### Feedback:
+Het verdienmodel wordt gedetailleerd en duidelijk gepresenteerd, hoewel de prijzen voor bulklicenties vaag zijn.
+
+### Suggesties:
+Geef een specifieke range of voorbeeldberekening voor bulklicentieprijzen om de transparantie te verbeteren, zoals "Bulk Licenties: €15-€18/student per cursus, met getrapte kortingen op basis van volume."
+
+# Marktpotentieel slide
+
+### Feedback:
+De slide somt potentiële marktgroottes op, maar biedt geen context voor de betekenis van de cijfers of gaat niet in op specifieke doelgroepen.
+
+### Suggesties:
+Voeg kwantitatieve gegevens toe om de marktpotentie te valideren, zoals "€2 miljard potentiële markt in het Europese hoger onderwijs op basis van gemiddelde licentiekosten en adoptiepercentages." Specificeer een primaire doelgroep voor de initiële focus, bijvoorbeeld "Richten op topuniversiteiten met actieve leerinitiatieven."

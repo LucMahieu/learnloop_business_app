@@ -226,9 +226,13 @@ class Case:
                     if st.button("Naar eindscherm"):
                         st.session_state.page = "eindscherm"
                         st.rerun()
+
+    def reset_module(self):
+        st.session_state.page = "home"
     
     def eindscherm(self):
         st.subheader("Dit is het eindscherm")
+        st.button("Opnieuw beginnen", on_click=self.reset_module)
 
     def show_table(self, title, table):
         st.subheader(title.replace("_", " ").capitalize())

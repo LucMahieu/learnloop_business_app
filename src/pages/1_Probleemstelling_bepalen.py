@@ -56,13 +56,6 @@ class Probleemstelling:
         
         return stream
     
-    # def extract_problem_statement(self, response):
-    #     """
-    #     Extract the problem statement from the response.
-    #     """
-    #     problem_statement = response.split("\n\n")[1]
-    #     return problem_statement
-    
 
     def extract_problem_statement(self, response):
         """

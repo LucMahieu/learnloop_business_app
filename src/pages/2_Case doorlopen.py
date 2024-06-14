@@ -55,7 +55,7 @@ class Case:
 
     def home_screen(self):
         
-        st.title("Welkom")
+        st.title("Case doorlopen")
         st.write(f"We gaan werken met een probleemstelling die als basis zal dienen voor de interactieve case. \n\n De standaard probleemstelling is: **{st.session_state.probleemstelling}**")
         
         if st.button("Gebruik deze probleemstelling", use_container_width=True):

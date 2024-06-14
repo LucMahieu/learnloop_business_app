@@ -7,11 +7,11 @@ class Overzicht:
         pass
 
     def write_something(self):
-        st.title("Planning Customer Experience & Journey Management")
-        st.write("""De cursus bestaat uit 3 fases:
+        st.title("Technische demo Beeckestijn")
+        st.write("""De technische uitwerking van onderstaande onderdelen van de demo:
                  \n 1. Probleemstelling bepalen
                  \n 2. Case doorlopen
-                 \n 3. Feedback op slides verwerken""")
+                 \n 3. Feedback op slides""")
 
     def render_next_page_button(self, page_name):
 

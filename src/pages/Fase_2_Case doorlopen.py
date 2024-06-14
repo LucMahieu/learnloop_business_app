@@ -231,14 +231,14 @@ class Case:
         st.subheader("Dit is het eindscherm")
 
     def show_table(self, title, table):
-        st.header(title.replace("_", " ").capitalize())
+        st.subheader(title.replace("_", " ").capitalize())
         df = pd.DataFrame(table)
         df.set_index(df.columns[0], inplace=True) # To set the first column as the index, for example month
         st.table(df)
 
     def show_module_tables(self, module):
         st.header(f'Onderzoeksmodule: {module.get("type").replace("_", " ").capitalize()}')
-
+        st.write("Om een goede analyse te maken van de gegevens, is het belangrijk dat je eerst de data zorgvuldig bestudeert en inziet hoe deze met elkaar samenhangen. Dit inzicht zal je helpen om tot een betere eindoplossing te komen.")
         data = module.get("data")
 
         for title in data:

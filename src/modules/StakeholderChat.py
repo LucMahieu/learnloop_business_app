@@ -63,7 +63,7 @@ class StakeholderChat:
         """
         if user_input := st.chat_input("Jouw antwoord"):
             self.add_to_user_responses(user_input)
-            with st.chat_message("user", avatar='🔘'):
+            with st.chat_message("user", avatar='🎓'):
                 st.markdown(f"{user_input}")
 
             with st.chat_message("assistant", avatar='👔'):

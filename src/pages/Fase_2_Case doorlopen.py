@@ -16,7 +16,8 @@ class Case:
             st.session_state.page = "home"
 
         if "probleemstelling" not in st.session_state:
-            st.session_state.probleemstelling = 'LearnLoop heeft lage NPS scores'
+            st.session_state.probleemstelling = 'LearnLoop heeft lage NPS scores.'
+
         if "overview" not in st.session_state:
             st.session_state.overview = None
 
@@ -56,7 +57,8 @@ class Case:
         st.title("Welkom bij het doorlopen van de case")
         st.write(
             "Dit is het beginscherm. Klik op de knop hieronder om verder te gaan.")
-        if st.button("Ga naar overzichtsscherm"):
+        col1 = st.columns([1])
+        if st.button("Ga naar overzichtsscherm", use_container_width=True):
             st.session_state.page = "overview_screen"
             st.rerun()
 
@@ -139,9 +141,21 @@ class Case:
                 st.write(
                     "Er is een fout opgetreden bij het genereren van het overzicht.")
         else:
-            st.write("Dit is het gegenereerde overzicht:")
             bedrijfsoverzicht = self.load_overview()
-            st.write(bedrijfsoverzicht)
+            bedrijfsinfo = bedrijfsoverzicht["bedrijfsinfo"]
+            naam = bedrijfsinfo["naam"]
+            sector = bedrijfsinfo["sector"]
+            aantal_werknemers = bedrijfsinfo["aantal_werknemers"]
+            bedrijfsomschrijving = bedrijfsinfo["bedrijfsomschrijving"]
+
+            # Displaying the information with Streamlit
+            st.title("Bedrijfsinformatie")
+            st.write(f"**Naam:** {naam}")
+            st.write(f"**Sector:** {sector}")
+            st.write(f"**Aantal werknemers:** {aantal_werknemers}")
+            st.write(f"**Bedrijfsomschrijving:** {bedrijfsomschrijving}")
+            st.write(f"**Probleemstelling:** {st.session_state.probleemstelling}")
+
             if len(os.listdir('./data/onderzoeksmodules/')) == 0:
                 with st.spinner("Een moment geduld, de onderzoeksmodules worden gegenereerd"):
                     print("Generating onderzoeksmodules")
@@ -158,15 +172,15 @@ class Case:
                 st.rerun()
 
     def onderzoeksmodules(self):
-        st.title("Onderzoeksmodules")
         modules = st.session_state.modules
         current_index = st.session_state.current_module_index
 
         if current_index < len(modules):
             module = modules[current_index]
-            self.show_module(module)
+            self.show_module(module, modules, current_index)
         else:
             st.write("Alle modules voltooid!")
+
 
         # Use a temporary variable for student_answer
         if "student_answer" not in st.session_state:
@@ -175,37 +189,37 @@ class Case:
         if module.get("type") != "stakeholder_chat":
             vraag = module.get("vraag")
             st.subheader(f"{vraag}")
-            st.session_state.student_answer = st.text_area("Jouw antwoord:", value=st.session_state.student_answer, key="temp_student_answer")
+            st.session_state.student_answer = st.text_area(label='', value=st.session_state.student_answer, key="temp_student_answer")
 
-        col1, col2, col3 = st.columns([1,2,1])
-        feedback = None
-        if current_index != 0:
-            with col1:
-                if st.button("Vorige module", use_container_width=True) and current_index > 0:
-                    st.session_state.current_module_index -= 1
-                    st.session_state.student_answer = ""  # Clear student_answer
-                    st.rerun()
-        if module.get("type") != "stakeholder_chat":
-            with col2:
-                if st.button("Controleer Antwoord", use_container_width=True):
-                    with st.spinner("Feedback aan het laden..."):
-                        feedback = self.check_answer(
-                            module["vraag"], st.session_state.student_answer, module["antwoord"])
-                    st.session_state.student_answer = ""  # Clear student_answer
-        if current_index != len(modules)-1:
-            with col3:
-                if st.button("Volgende module", use_container_width=True) and current_index < len(modules) - 1:
-                    st.session_state.current_module_index += 1
-                    st.session_state.student_answer = ""  # Clear student_answer
-                    st.rerun()
-        if feedback is not None:
-            st.write(f"{feedback}")
+            col1, col2, col3 = st.columns([1,2,1])
+            feedback = None
+            if current_index != 0:
+                with col1:
+                    if st.button("Vorige module", use_container_width=True) and current_index > 0:
+                        st.session_state.current_module_index -= 1
+                        st.session_state.student_answer = ""  # Clear student_answer
+                        st.rerun()
+            if module.get("type") != "stakeholder_chat":
+                with col2:
+                    if st.button("Controleer Antwoord", use_container_width=True):
+                        with st.spinner("Feedback aan het laden..."):
+                            feedback = self.check_answer(
+                                module["vraag"], st.session_state.student_answer, module["antwoord"])
+                        st.session_state.student_answer = ""  # Clear student_answer
+            if current_index != len(modules)-1:
+                with col3:
+                    if st.button("Volgende module", use_container_width=True) and current_index < len(modules) - 1:
+                        st.session_state.current_module_index += 1
+                        st.session_state.student_answer = ""  # Clear student_answer
+                        st.rerun()
+            if feedback is not None:
+                st.write(f"{feedback}")
 
-        if current_index == len(modules)-1:
-            with col2:
-                if st.button("Naar eindscherm"):
-                    st.session_state.page = "eindscherm"
-                    st.rerun()
+            if current_index == len(modules)-1:
+                with col3:
+                    if st.button("Naar eindscherm"):
+                        st.session_state.page = "eindscherm"
+                        st.rerun()
     
     def eindscherm(self):
         st.subheader("Dit is het eindscherm")
@@ -217,7 +231,7 @@ class Case:
         st.table(df)
 
     def show_module_tables(self, module):
-        st.header(module.get("type").replace("_", " ").capitalize())
+        st.header(f'Onderzoeksmodule: {module.get("type").replace("_", " ").capitalize()}')
 
         data = module.get("data")
 
@@ -225,10 +239,28 @@ class Case:
             self.show_table(title, data[title])
         
 
-    def show_module(self, module):
+    def show_module(self, module, modules, current_index):
         module_type = module.get("type")
 
         if module_type == "stakeholder_chat":
+            col1, col2, col3 = st.columns([1,2,1])
+            if current_index != 0:
+                with col1:
+                    if st.button("Vorige module", use_container_width=True) and current_index > 0:
+                        st.session_state.current_module_index -= 1
+                        st.session_state.student_answer = ""  # Clear student_answer
+                        st.rerun()
+            if current_index != len(modules)-1:
+                with col3:
+                    if st.button("Volgende module", use_container_width=True) and current_index < len(modules) - 1:
+                        st.session_state.current_module_index += 1
+                        st.session_state.student_answer = ""  # Clear student_answer
+                        st.rerun()
+            if current_index == len(modules)-1:
+                with col3:
+                    if st.button("Naar eindscherm"):
+                        st.session_state.page = "eindscherm"
+                        st.rerun()
             stakeholderChat = StakeholderChat(module.get("naam"), st.session_state.probleemstelling, module)
             stakeholderChat.main()
         else:

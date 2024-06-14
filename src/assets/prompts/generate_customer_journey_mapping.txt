@@ -7,7 +7,7 @@ Benader deze taak stap voor stap, neem je tijd en sla geen stappen over.
 4. data: 
 - Lees de mogelijke_conclusies
 - De concrete data moet aansluiten op de mogelijke conclusies
-5. Vraag die student toetst op het begrip van de ingeziene data
+5. Vraag die student toetst op het begrip van de gegenereerde data
 6. Antwoord op de vraag
 
 Voorbeeld output:

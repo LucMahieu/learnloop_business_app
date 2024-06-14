@@ -3,7 +3,7 @@ import json
 import os
 from utils.openai_client import connect_to_openai
 import pandas as pd
-from src.modules.StakeholderChat import StakeholderChat
+from modules.StakeholderChat import StakeholderChat
 
 
 class Case:
@@ -28,6 +28,9 @@ class Case:
         
         if "messages" not in st.session_state:
             st.session_state.messages = []
+
+        if "student_answer" not in st.session_state:
+            st.session_state.student_answer = ""
 
     def main(self):
         if st.session_state.page == "home":
@@ -144,7 +147,7 @@ class Case:
                     print("Generating onderzoeksmodules")
                     self.generate_onderzoeksmodules(bedrijfsoverzicht)
                     print("Succesfully generated onderzoeksmodules")
-        col1, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([2, 1, 2])
         with col1:
             if st.button("Ga terug",use_container_width=True):
                 st.session_state.page = "home"
@@ -165,31 +168,38 @@ class Case:
         else:
             st.write("Alle modules voltooid!")
 
+        # Use a temporary variable for student_answer
+        if "student_answer" not in st.session_state:
+            st.session_state.student_answer = ""
+
         if module.get("type") != "stakeholder_chat":
             vraag = module.get("vraag")
             st.subheader(f"{vraag}")
-            student_answer = st.text_area("Jouw antwoord:")
-        
+            st.session_state.student_answer = st.text_area("Jouw antwoord:", value=st.session_state.student_answer, key="temp_student_answer")
+
         col1, col2, col3 = st.columns([1,2,1])
+        feedback = None
         if current_index != 0:
             with col1:
                 if st.button("Vorige module", use_container_width=True) and current_index > 0:
                     st.session_state.current_module_index -= 1
+                    st.session_state.student_answer = ""  # Clear student_answer
                     st.rerun()
         if module.get("type") != "stakeholder_chat":
             with col2:
                 if st.button("Controleer Antwoord", use_container_width=True):
-                    feedback = self.check_answer(
-                        module["vraag"], student_answer, module["antwoord"])
-                    st.write(f"{feedback}.")
-        
+                    with st.spinner("Feedback aan het laden..."):
+                        feedback = self.check_answer(
+                            module["vraag"], st.session_state.student_answer, module["antwoord"])
+                    st.session_state.student_answer = ""  # Clear student_answer
         if current_index != len(modules)-1:
             with col3:
                 if st.button("Volgende module", use_container_width=True) and current_index < len(modules) - 1:
                     st.session_state.current_module_index += 1
+                    st.session_state.student_answer = ""  # Clear student_answer
                     st.rerun()
-
-
+        if feedback is not None:
+            st.write(f"{feedback}")
 
         if current_index == len(modules)-1:
             with col2:
